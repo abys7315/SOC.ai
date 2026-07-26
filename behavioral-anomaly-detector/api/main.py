@@ -101,7 +101,7 @@ async def generate_live_metrics():
                 "events_per_sec": eps,
                 "cpu_usage": random.uniform(20, 80),
                 "ram_usage": random.uniform(40, 90),
-                "timestamp": datetime.datetime.now().isoformat(),
+                "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00', 'Z'),
                 "total_events": total_events_count,
                 "accuracy": round(random.uniform(94.5, 98.2), 1)
             }
@@ -160,7 +160,7 @@ async def score_event(event: dict):
         
         alert = {
             "id": str(uuid.uuid4()),
-            "timestamp": datetime.datetime.now().isoformat(),
+            "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00', 'Z'),
             "entity_id": entity_id,
             "risk_score": adjusted_score,
             "anomaly_type": pred_class,
@@ -260,7 +260,7 @@ async def inject_attack(payload: InjectPayload):
         event = {
             "entity_id": entity_id,
             "entity_type": "user",
-            "timestamp": (datetime.datetime.now() + datetime.timedelta(seconds=i)).isoformat() + "Z",
+            "timestamp": (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(seconds=i)).isoformat().replace('+00:00', 'Z'),
             "source_ip": base_ip,
             "geo_location": base_geo,
             "resource_accessed": base_res,
@@ -307,7 +307,7 @@ async def inject_attack(payload: InjectPayload):
 
     alert = {
         "id": str(uuid.uuid4()),
-        "timestamp": datetime.datetime.now().isoformat(),
+        "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00', 'Z'),
         "entity_id": entity_id,
         "risk_score": prediction.get('risk_score', 0.85),
         "anomaly_type": prediction.get('predicted_class', payload.anomaly_type).upper(),
