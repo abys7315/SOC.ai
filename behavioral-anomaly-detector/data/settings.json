@@ -1,0 +1,27 @@
+{
+    "general": {
+        "platformName": "Behavioral Anomaly Detection Platform",
+        "language": "English (US)",
+        "timezone": "IST",
+        "theme": "Light",
+        "organizationName": "Honeywell Technologies",
+        "sessionTimeout": "30 Minutes",
+        "idleTimeoutWarning": "5 Minutes",
+        "dateFormat": "YYYY-MM-DD",
+        "refreshInterval": "15 Seconds"
+    },
+    "security": {
+        "mfa": true,
+        "sessionTimeout": "30",
+        "passwordPolicy": "Strict",
+        "autoBlockIp": true,
+        "maxFailedLogins": "5"
+    },
+    "ai": {
+        "activeModel": "Transformer (Multi-Head Attention)",
+        "retrainingInterval": "Weekly",
+        "anomalyThreshold": "0.75",
+        "maxFalsePositives": "2",
+        "autoUpdate": true
+    }
+}

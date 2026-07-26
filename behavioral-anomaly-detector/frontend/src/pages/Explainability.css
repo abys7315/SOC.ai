@@ -1,0 +1,216 @@
+.explain-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.alert-context-banner {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-top: 3px solid var(--accent-red);
+  background: linear-gradient(90deg, rgba(255,0,60,0.1) 0%, rgba(0,0,0,0.2) 20%);
+}
+
+.alert-icon-large {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: rgba(255, 0, 60, 0.1);
+  border: 1px solid rgba(255, 0, 60, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.context-metrics {
+  display: flex;
+  gap: 3rem;
+  padding-left: 2rem;
+}
+
+.context-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.c-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.c-val {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+.explain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Why Flagged Section */
+.flag-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.flag-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.f-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.f-icon.red { background: rgba(255,0,60,0.1); color: var(--accent-red); }
+.f-icon.orange { background: rgba(245,158,11,0.1); color: #f59e0b; }
+.f-icon.yellow { background: rgba(234,179,8,0.1); color: #eab308; }
+
+.f-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.f-title {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.f-badge {
+  font-size: 0.65rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+.f-badge.red { background: var(--accent-red); color: white; }
+.f-badge.orange { background: #f59e0b; color: white; }
+.f-badge.yellow { background: #eab308; color: black; font-weight: bold; }
+
+.f-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Factors Table */
+.factors-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.factors-table th {
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-transform: uppercase;
+}
+
+.factors-table td {
+  padding: 0.75rem 0.5rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.factors-table tr:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  display: flex;
+  background: rgba(0,0,0,0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.t-option {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+.t-option.active {
+  background: var(--accent-cyan);
+  color: black;
+  font-weight: bold;
+}
+
+/* Temporal Timeline */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+.t-track {
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  bottom: 20px;
+  width: 2px;
+  background: rgba(255,255,255,0.1);
+}
+
+.t-event {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.t-time {
+  width: 70px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.t-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.t-desc {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+.t-desc span {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+/* Recommended Actions */
+.rec-action-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.85rem;
+}

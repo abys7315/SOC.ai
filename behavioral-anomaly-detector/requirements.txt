@@ -1,0 +1,11 @@
+pandas
+numpy
+Faker
+torch
+torch_geometric
+scikit-learn
+fastapi
+uvicorn
+streamlit
+pyarrow
+requests

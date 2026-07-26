@@ -1,0 +1,167 @@
+[
+    {
+        "id": "ff93ea1b-ee17-497c-8b19-b537bb778542",
+        "timestamp": "2026-07-25T14:48:35.822124Z",
+        "action": "CONFIG_UPDATE",
+        "user": "admin",
+        "details": {
+            "general": {
+                "platformName": "Behavioral Anomaly Detection Platform",
+                "language": "English (US)",
+                "timezone": "IST",
+                "theme": "Light",
+                "organizationName": "Honeywell Technologies",
+                "sessionTimeout": "30 Minutes",
+                "idleTimeoutWarning": "5 Minutes",
+                "dateFormat": "YYYY-MM-DD",
+                "refreshInterval": "15 Seconds"
+            },
+            "security": {
+                "mfa": true,
+                "sessionTimeout": "30",
+                "passwordPolicy": "Strict",
+                "autoBlockIp": true,
+                "maxFailedLogins": "5"
+            },
+            "ai": {
+                "activeModel": "Transformer (Multi-Head Attention)",
+                "retrainingInterval": "Weekly",
+                "anomalyThreshold": "0.75",
+                "maxFalsePositives": "2",
+                "autoUpdate": true
+            }
+        }
+    },
+    {
+        "id": "b47f6d2f-2e77-4cbd-a559-f0d001300314",
+        "timestamp": "2026-07-25T14:48:35.039866Z",
+        "action": "CONFIG_UPDATE",
+        "user": "admin",
+        "details": {
+            "general": {
+                "platformName": "Behavioral Anomaly Detection Platform",
+                "language": "English (US)",
+                "timezone": "IST",
+                "theme": "Light",
+                "organizationName": "Honeywell Technologies",
+                "sessionTimeout": "30 Minutes",
+                "idleTimeoutWarning": "5 Minutes",
+                "dateFormat": "YYYY-MM-DD",
+                "refreshInterval": "15 Seconds"
+            },
+            "security": {
+                "mfa": true,
+                "sessionTimeout": "30",
+                "passwordPolicy": "Strict",
+                "autoBlockIp": true,
+                "maxFailedLogins": "5"
+            },
+            "ai": {
+                "activeModel": "Transformer (Multi-Head Attention)",
+                "retrainingInterval": "Weekly",
+                "anomalyThreshold": "0.75",
+                "maxFalsePositives": "2",
+                "autoUpdate": true
+            }
+        }
+    },
+    {
+        "id": "e042cd23-07d6-4081-ae7b-24062a002b8b",
+        "timestamp": "2026-07-25T11:44:08.623093Z",
+        "action": "CONFIG_UPDATE",
+        "user": "admin",
+        "details": {
+            "general": {
+                "platformName": "Behavioral Anomaly Detection Platform",
+                "language": "English (US)",
+                "timezone": "IST",
+                "theme": "Dark",
+                "organizationName": "Honeywell Technologies",
+                "sessionTimeout": "30 Minutes",
+                "idleTimeoutWarning": "5 Minutes",
+                "dateFormat": "YYYY-MM-DD",
+                "refreshInterval": "15 Seconds"
+            },
+            "security": {
+                "mfa": true,
+                "sessionTimeout": "30",
+                "passwordPolicy": "Strict",
+                "autoBlockIp": true,
+                "maxFailedLogins": "5"
+            },
+            "ai": {
+                "activeModel": "Transformer (Multi-Head Attention)",
+                "retrainingInterval": "Weekly",
+                "anomalyThreshold": "0.75",
+                "maxFalsePositives": "2",
+                "autoUpdate": true
+            }
+        }
+    },
+    {
+        "id": "74c7c051-6d5a-4a59-9d65-16fed26ae49d",
+        "timestamp": "2026-07-25T11:44:08.413633Z",
+        "action": "CONFIG_UPDATE",
+        "user": "admin",
+        "details": {
+            "general": {
+                "platformName": "Behavioral Anomaly Detection Platform",
+                "language": "English (US)",
+                "timezone": "IST",
+                "theme": "Dark",
+                "organizationName": "Honeywell Technologies",
+                "sessionTimeout": "30 Minutes",
+                "idleTimeoutWarning": "5 Minutes",
+                "dateFormat": "YYYY-MM-DD",
+                "refreshInterval": "15 Seconds"
+            },
+            "security": {
+                "mfa": true,
+                "sessionTimeout": "30",
+                "passwordPolicy": "Strict",
+                "autoBlockIp": true,
+                "maxFailedLogins": "5"
+            },
+            "ai": {
+                "activeModel": "Transformer (Multi-Head Attention)",
+                "retrainingInterval": "Weekly",
+                "anomalyThreshold": "0.75",
+                "maxFalsePositives": "2",
+                "autoUpdate": true
+            }
+        }
+    },
+    {
+        "id": "167a3796-5ba3-4121-b18f-907bd857f6e2",
+        "timestamp": "2026-07-25T11:44:07.967464Z",
+        "action": "CONFIG_UPDATE",
+        "user": "admin",
+        "details": {
+            "general": {
+                "platformName": "Behavioral Anomaly Detection Platform",
+                "language": "English (US)",
+                "timezone": "IST",
+                "theme": "Dark",
+                "organizationName": "Honeywell Technologies",
+                "sessionTimeout": "30 Minutes",
+                "idleTimeoutWarning": "5 Minutes",
+                "dateFormat": "YYYY-MM-DD",
+                "refreshInterval": "15 Seconds"
+            },
+            "security": {
+                "mfa": true,
+                "sessionTimeout": "30",
+                "passwordPolicy": "Strict",
+                "autoBlockIp": true,
+                "maxFailedLogins": "5"
+            },
+            "ai": {
+                "activeModel": "Transformer (Multi-Head Attention)",
+                "retrainingInterval": "Weekly",
+                "anomalyThreshold": "0.75",
+                "maxFalsePositives": "2",
+                "autoUpdate": true
+            }
+        }
+    }
+]
