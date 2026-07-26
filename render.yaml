@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: behavioral-anomaly-detector
+    env: docker
+    plan: free
+    dockerContext: ./behavioral-anomaly-detector
+    dockerfilePath: ./behavioral-anomaly-detector/Dockerfile
+    envVars:
+      - key: PORT
+        value: "8000"
