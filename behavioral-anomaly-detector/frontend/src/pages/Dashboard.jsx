@@ -4,6 +4,8 @@ import { ShieldCheck, Activity, Users, Target, AlertTriangle, X, ShieldAlert, Do
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import './Dashboard.css';
+import { API_BASE, WS_BASE } from '../config';
+
 
 export default function Dashboard({ alerts }) {
   const [isolatedEntities, setIsolatedEntities] = useState(new Set());
@@ -61,7 +63,7 @@ export default function Dashboard({ alerts }) {
   });
 
   useEffect(() => {
-    const ws = new WebSocket(`${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/ws/metrics`);
+    const ws = new WebSocket(`${WS_BASE}/ws/metrics`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'metrics_update') {
@@ -121,7 +123,7 @@ export default function Dashboard({ alerts }) {
   const handleIsolate = async () => {
     if (isolateModalOpen) {
       try {
-        await fetch(`/api/alerts/${isolateModalOpen.id || "mock"}/action`, {
+        await fetch(`${API_BASE}/api/alerts/${isolateModalOpen.id || "mock"}/action`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ action: 'isolated' })

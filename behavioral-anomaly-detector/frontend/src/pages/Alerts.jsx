@@ -6,6 +6,8 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './Alerts.css';
+import { API_BASE, WS_BASE } from '../config';
+
 
 export default function Alerts({ alerts: initialAlerts }) {
   const navigate = useNavigate();
@@ -122,7 +124,7 @@ export default function Alerts({ alerts: initialAlerts }) {
         is_accepted: isPositive
     };
     
-    fetch('/feedback', {
+    fetch(`${API_BASE}/feedback`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

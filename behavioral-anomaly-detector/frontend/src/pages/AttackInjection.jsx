@@ -5,6 +5,8 @@ import {
   Play, Square, RotateCcw, Download, Activity
 } from 'lucide-react';
 import './AttackInjection.css';
+import { API_BASE, WS_BASE } from '../config';
+
 
 const ATTACK_TYPES = [
   { id: 'brute_force', icon: <Lock size={24}/>, title: 'Brute Force', desc: 'Rapid, repeated failed login attempts from the same source IP.', color: 'var(--accent-red)' },
@@ -45,7 +47,7 @@ export default function AttackInjection({ alerts = [] }) {
 
   const handleInject = () => {
     setIsInjecting(true);
-    fetch('/api/attack/inject', {
+    fetch(`${API_BASE}/api/attack/inject`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
@@ -92,7 +94,7 @@ export default function AttackInjection({ alerts = [] }) {
   };
 
   const handleQuickAction = (actionName) => {
-    fetch('/api/generic-action', {
+    fetch(`${API_BASE}/api/generic-action`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ action: actionName })

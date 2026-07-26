@@ -5,7 +5,7 @@ export default function SettingsLogs({ config, handleChange, handleSave, handleA
   const [auditLogs, setAuditLogs] = useState([]);
   
   useEffect(() => {
-    fetch('/api/audit-logs')
+    fetch(`${API_BASE}/api/audit-logs`)
       .then(res => res.json())
       .then(data => setAuditLogs(data.logs || []))
       .catch(err => console.error(err));
@@ -13,7 +13,7 @@ export default function SettingsLogs({ config, handleChange, handleSave, handleA
 
   const handleDownload = async () => {
     try {
-      const res = await fetch('/api/export', {
+      const res = await fetch(`${API_BASE}/api/export`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'csv', source: 'audit_logs' })
@@ -276,3 +276,5 @@ export default function SettingsLogs({ config, handleChange, handleSave, handleA
 }
 // Import RefreshCw here too to match screenshot
 import { RefreshCw } from 'lucide-react';
+import { API_BASE, WS_BASE } from '../../config';
+

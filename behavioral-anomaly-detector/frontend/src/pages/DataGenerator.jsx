@@ -5,6 +5,8 @@ import {
   Activity, ArrowRight, Server, ShieldCheck, UserCheck, Code
 } from 'lucide-react';
 import './DataGenerator.css';
+import { API_BASE, WS_BASE } from '../config';
+
 
 const ATTACK_SCENARIOS = [
   { id: 'brute_force', icon: <Lock size={24}/>, title: 'Brute Force Attack', desc: 'Simulate repeated failed login attempts from a single/multiple IPs', color: 'var(--accent-red)' },
@@ -81,7 +83,7 @@ export default function DataGenerator() {
   };
 
   React.useEffect(() => {
-    fetch('/api/generator/status')
+    fetch(`${API_BASE}/api/generator/status`)
       .then(res => res.json())
       .then(data => setIsGenerating(data.running))
       .catch(err => console.error(err));
@@ -91,7 +93,7 @@ export default function DataGenerator() {
     let intervalId;
     if (isGenerating) {
       intervalId = setInterval(() => {
-        fetch('/api/generator/events')
+        fetch(`${API_BASE}/api/generator/events`)
           .then(res => res.json())
           .then(data => setRecentEvents(data.events || []))
           .catch(err => console.error(err));

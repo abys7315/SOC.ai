@@ -6,6 +6,8 @@ import {
 } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Explainability.css';
+import { API_BASE, WS_BASE } from '../config';
+
 
 export default function Explainability() {
   const [activeTab, setActiveTab] = useState('Overview');
@@ -44,7 +46,7 @@ export default function Explainability() {
      if (type === 'verify' || type === 'reset') target = alert.entity_id;
      if (type === 'block') target = alert.event_details?.source_ip || '10.10.10.45';
 
-     fetch('/api/action', {
+     fetch(`${API_BASE}/api/action`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action_type: type, target: target })
@@ -62,7 +64,7 @@ export default function Explainability() {
 
   React.useEffect(() => {
     if (alert?.entity_id) {
-       fetch(`/api/entity/${alert.entity_id}`)
+       fetch(`${API_BASE}/api/entity/${alert.entity_id}`)
          .then(res => res.json())
          .then(data => setEntityProfile(data))
          .catch(err => console.error("Error fetching entity profile:", err));

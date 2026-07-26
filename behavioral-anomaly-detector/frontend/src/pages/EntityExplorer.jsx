@@ -5,6 +5,8 @@ import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import { useLocation } from 'react-router-dom';
 import './EntityExplorer.css';
+import { API_BASE, WS_BASE } from '../config';
+
 
 export default function EntityExplorer({ alerts }) {
   const [activeTab, setActiveTab] = useState('Overview');
@@ -82,7 +84,7 @@ export default function EntityExplorer({ alerts }) {
 
 
   React.useEffect(() => {
-    fetch(`/api/entity/${entityId}`)
+    fetch(`${API_BASE}/api/entity/${entityId}`)
       .then(res => res.json())
       .then(data => setEntityData(data))
       .catch(err => console.error(err));

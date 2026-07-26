@@ -5,12 +5,14 @@ import {
   Database, Network, Cpu, HardDrive, CheckCircle
 } from 'lucide-react';
 import './SystemHealth.css';
+import { API_BASE, WS_BASE } from '../config';
+
 
 export default function SystemHealth() {
   const [metrics, setMetrics] = useState({ cpu: 58, ram: 62, disk: 47 });
 
   useEffect(() => {
-    const ws = new WebSocket(`${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/ws/metrics`);
+    const ws = new WebSocket(`${WS_BASE}/ws/metrics`);
     ws.onmessage = (event) => {
       const parsed = JSON.parse(event.data);
       if (parsed.type === 'metrics_update') {
@@ -25,7 +27,7 @@ export default function SystemHealth() {
   }, []);
   const handleRefresh = async () => {
     try {
-      await fetch('/api/health/refresh', { method: 'POST' });
+      await fetch(`${API_BASE}/api/health/refresh`, { method: 'POST' });
       // In a real app we'd refetch metrics here, but websocket is handling it.
       // Force a slight jiggle to show it refreshed
       setMetrics(prev => ({...prev, cpu: prev.cpu + (Math.random() > 0.5 ? 1 : -1)}));
