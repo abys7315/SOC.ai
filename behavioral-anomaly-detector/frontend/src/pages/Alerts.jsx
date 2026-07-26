@@ -11,7 +11,44 @@ import { API_BASE, WS_BASE } from '../config';
 
 export default function Alerts({ alerts: initialAlerts }) {
   const navigate = useNavigate();
-  const alerts = initialAlerts;
+  const alerts = initialAlerts && initialAlerts.length > 0 ? initialAlerts : [
+    {
+      id: "ALT-9901-DEMO",
+      entity_id: "usr_admin_x",
+      anomaly_type: "impossible_travel",
+      risk_score: 0.92,
+      timestamp: new Date().toISOString(),
+      explanation: "Entity authenticated from New York and Tokyo within a 45-minute window. Geo-velocity exceeds physical limits, highly indicative of compromised credentials.",
+      isColdStart: false
+    },
+    {
+      id: "ALT-9902-DEMO",
+      entity_id: "svc_db_sync",
+      anomaly_type: "lateral_movement",
+      risk_score: 0.78,
+      timestamp: new Date(Date.now() - 1000 * 60 * 15).toISOString(),
+      explanation: "Service account accessed 14 distinct production servers via SSH, deviating significantly from its baseline of 2 servers.",
+      isColdStart: false
+    },
+    {
+      id: "ALT-9903-DEMO",
+      entity_id: "dev_edge_04",
+      anomaly_type: "brute_force",
+      risk_score: 0.85,
+      timestamp: new Date(Date.now() - 1000 * 60 * 45).toISOString(),
+      explanation: "Continuous failed authentication attempts detected against internal API gateway originating from a suspicious subnet.",
+      isColdStart: false
+    },
+    {
+      id: "ALT-9904-DEMO",
+      entity_id: "usr_guest_99",
+      anomaly_type: "low_slow",
+      risk_score: 0.45,
+      timestamp: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
+      explanation: "Steady, low-volume data exfiltration to an unknown external IP address detected over a 12-hour period.",
+      isColdStart: true
+    }
+  ];
   const [selectedAlertId, setSelectedAlertId] = useState(null);
   const [toast, setToast] = useState(null);
   const [showMapModal, setShowMapModal] = useState(false);
