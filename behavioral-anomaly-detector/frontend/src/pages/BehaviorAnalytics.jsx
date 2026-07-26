@@ -283,7 +283,7 @@ export default function BehaviorAnalytics() {
 {/* Top Accessed Resources */}
         <div className="glass-panel">
           <h3 className="panel-title">Top Accessed Resources</h3>
-          <table className="alerts-table" style={{marginTop: '0'}}>
+          <div className="table-responsive"><table className="alerts-table" style={{marginTop: '0'}}>
              <thead>
                <tr><th>Resource</th><th>Type</th><th>Access Count</th></tr>
              </thead>
@@ -294,7 +294,7 @@ export default function BehaviorAnalytics() {
                <tr><td>File Server</td><td>Server</td><td>142</td></tr>
                <tr><td>Analytics API</td><td>API</td><td>68</td></tr>
              </tbody>
-          </table>
+          </table></div>
         </div>
 
 {/* Resource Access Heatmap */}
@@ -436,7 +436,7 @@ export default function BehaviorAnalytics() {
             
             {!isMapExpanded && (
             <div style={{flex: 1.5, paddingLeft: '1rem', borderLeft: '1px solid rgba(255,255,255,0.1)', overflowY: 'auto'}}>
-               <table className="alerts-table" style={{marginTop: 0}}>
+               <div className="table-responsive"><table className="alerts-table" style={{marginTop: 0}}>
                  <thead>
                    <tr>
                      <th>IP Address</th>
@@ -465,7 +465,7 @@ export default function BehaviorAnalytics() {
                      <tr><td colSpan="4" style={{textAlign: 'center', color: 'var(--text-secondary)'}}>Loading geographic data...</td></tr>
                    )}
                  </tbody>
-               </table>
+               </table></div>
             </div>
             )}
           </div>
@@ -478,7 +478,7 @@ export default function BehaviorAnalytics() {
         {/* Top CLI Commands Executed */}
         <div className="glass-panel">
           <h3 className="panel-title">Top CLI Commands Executed</h3>
-          <table className="alerts-table" style={{marginTop: '0'}}>
+          <div className="table-responsive"><table className="alerts-table" style={{marginTop: '0'}}>
              <thead>
                <tr><th>Command</th><th>Frequency</th><th>Risk Level</th></tr>
              </thead>
@@ -489,7 +489,7 @@ export default function BehaviorAnalytics() {
                <tr><td><code style={{color: 'var(--accent-cyan)'}}>chmod 777 /var/www</code></td><td>12</td><td style={{color: 'var(--accent-red)'}}>High</td></tr>
                <tr><td><code style={{color: 'var(--accent-cyan)'}}>curl http://10.0...</code></td><td>8</td><td style={{color: 'var(--accent-red)'}}>High</td></tr>
              </tbody>
-          </table>
+          </table></div>
         </div>
 
         {/* Command Risk Distribution */}

@@ -48,7 +48,7 @@ export default function SettingsDetectionRules({ config, handleChange, handleSav
             <h3 className="panel-title" style={{color: 'var(--text-primary)'}}><span style={{color:'var(--accent-cyan)'}}>1.</span> Risk Score Thresholds</h3>
             <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem'}}>Define risk score ranges and their severity levels.</p>
             
-            <table className="settings-table" style={{fontSize: '0.75rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.75rem'}}>
                <thead>
                  <tr>
                    <th>Severity Level</th>
@@ -78,7 +78,7 @@ export default function SettingsDetectionRules({ config, handleChange, handleSav
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             
             <button className="btn-outline" style={{width: '100%', marginTop: '1rem', fontSize: '0.75rem', padding: '0.4rem'}} onClick={() => handleAction("Add New Level")}><Plus size={14} style={{marginRight:'0.3rem'}}/> Add New Level</button>
           </div>
@@ -168,7 +168,7 @@ export default function SettingsDetectionRules({ config, handleChange, handleSav
             <h3 className="panel-title" style={{color: 'var(--text-primary)'}}><span style={{color:'var(--accent-cyan)'}}>5.</span> Custom Detection Rules</h3>
             <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem'}}>Create custom rules for specific business requirements.</p>
             
-            <table className="settings-table" style={{fontSize: '0.7rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.7rem'}}>
                <thead>
                  <tr>
                    <th>Rule Name</th>
@@ -192,7 +192,7 @@ export default function SettingsDetectionRules({ config, handleChange, handleSav
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             <button className="btn-outline" style={{width: 'max-content', marginTop: '1rem', fontSize: '0.75rem', padding: '0.4rem 0.8rem'}} onClick={handleAddRule}><Plus size={14} style={{marginRight:'0.3rem'}}/> Create New Rule</button>
           </div>
         </div>

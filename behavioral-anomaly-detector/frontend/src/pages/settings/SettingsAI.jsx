@@ -110,7 +110,7 @@ export default function SettingsAI({ config, handleChange, handleSave, handleAct
                <div className="si-tab">System Features</div>
             </div>
 
-            <table className="settings-table" style={{fontSize: '0.7rem', marginTop: '1rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.7rem', marginTop: '1rem'}}>
                <thead>
                  <tr>
                    <th>Feature Name</th>
@@ -148,7 +148,7 @@ export default function SettingsAI({ config, handleChange, handleSave, handleAct
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             <div style={{marginTop: '1rem'}}>
               <span style={{fontSize: '0.7rem', color: 'var(--accent-cyan)', cursor: 'pointer'}}><Settings size={12} style={{display:'inline', verticalAlign:'middle', marginRight:'0.2rem'}}/> Manage Features</span>
             </div>

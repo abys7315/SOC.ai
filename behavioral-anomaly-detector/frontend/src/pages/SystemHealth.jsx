@@ -121,7 +121,7 @@ export default function SystemHealth() {
          {/* Service Health */}
          <div className="glass-panel">
             <h3 className="panel-title">Service Health</h3>
-            <table className="alerts-table" style={{marginTop: 0}}>
+            <div className="table-responsive"><table className="alerts-table" style={{marginTop: 0}}>
                <thead>
                  <tr><th>Service</th><th>Status</th><th>Uptime</th><th>Response</th><th>Inst</th></tr>
                </thead>
@@ -133,7 +133,7 @@ export default function SystemHealth() {
                  <tr><td>User & Entity Service</td><td><span className="status-badge" style={{color: 'var(--accent-green)', border: 'none'}}>Healthy</span></td><td>100%</td><td>24 ms</td><td>2</td></tr>
                  <tr><td>Feature Store Service</td><td><span className="status-badge" style={{color: '#f59e0b', border: 'none'}}>Warning</span></td><td>99.95%</td><td>120 ms</td><td>4</td></tr>
                </tbody>
-            </table>
+            </table></div>
          </div>
 
          {/* Infrastructure Overview (Gauges) */}
@@ -166,7 +166,7 @@ export default function SystemHealth() {
          {/* Resource Utilization by Node */}
          <div className="glass-panel">
             <h3 className="panel-title">Resource Utilization by Node</h3>
-            <table className="node-table">
+            <div className="table-responsive"><table className="node-table">
                <thead><tr><th>Node</th><th>CPU (%)</th><th>Memory (%)</th><th>Disk I/O (MB/s)</th><th>Status</th></tr></thead>
                <tbody>
                   {[
@@ -195,7 +195,7 @@ export default function SystemHealth() {
                     </tr>
                   ))}
                </tbody>
-            </table>
+            </table></div>
          </div>
 
          {/* System Map */}

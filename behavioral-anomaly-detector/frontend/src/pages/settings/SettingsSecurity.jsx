@@ -426,7 +426,7 @@ export default function SettingsSecurity({ config, handleChange, handleSave, han
 
             <h4 style={{fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '1.5rem', marginBottom: '0.75rem'}}>Active API Keys</h4>
             <div className="api-table-wrapper">
-              <table className="settings-table">
+              <div className="table-responsive"><table className="settings-table">
                  <thead>
                    <tr>
                      <th>Key Name</th>
@@ -447,7 +447,7 @@ export default function SettingsSecurity({ config, handleChange, handleSave, han
                      </tr>
                    ))}
                  </tbody>
-              </table>
+              </table></div>
               <div style={{textAlign: 'right', marginTop: '0.5rem'}}>
                 <span style={{fontSize: '0.7rem', color: 'var(--accent-cyan)', cursor: 'pointer'}}>View All API Keys &gt;</span>
               </div>

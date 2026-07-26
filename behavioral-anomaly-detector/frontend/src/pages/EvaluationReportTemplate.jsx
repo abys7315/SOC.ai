@@ -58,7 +58,7 @@ export default function EvaluationReportTemplate() {
         <h3 className="section-title">1. DETECTION PERFORMANCE (Overall)</h3>
         <div className="report-grid-3">
           <div className="perf-table-container">
-             <table className="perf-table">
+             <div className="table-responsive"><table className="perf-table">
                <tbody>
                  <tr><td>Accuracy</td><td className="bold">97.4%</td></tr>
                  <tr><td>Precision (PPV)</td><td className="bold">96.2%</td></tr>
@@ -66,7 +66,7 @@ export default function EvaluationReportTemplate() {
                  <tr><td>F1 Score</td><td className="bold">95.8%</td></tr>
                  <tr><td>Specificity</td><td className="bold">98.7%</td></tr>
                </tbody>
-             </table>
+             </table></div>
              <div className="matrix-grid" style={{marginTop: '10px'}}>
                <div className="m-cell m-header"></div>
                <div className="m-cell m-header">Pred Anomaly</div>
@@ -106,7 +106,7 @@ export default function EvaluationReportTemplate() {
       <div className="report-section">
         <h3 className="section-title">2. ATTACK TYPE ANALYSIS</h3>
         <div className="report-grid-2">
-          <table className="perf-table full-width">
+          <div className="table-responsive"><table className="perf-table full-width">
             <thead>
               <tr>
                 <th>Attack Type</th>
@@ -122,7 +122,7 @@ export default function EvaluationReportTemplate() {
               <tr><td>Credential Stuffing</td><td>97.4%</td><td>96.8%</td><td>97.1%</td><td>3,412</td></tr>
               <tr><td>Lateral Movement</td><td>92.5%</td><td>89.4%</td><td>90.9%</td><td>234</td></tr>
             </tbody>
-          </table>
+          </table></div>
           <div className="bar-chart-mock">
              <div style={{fontWeight: 'bold', marginBottom: '10px', textAlign: 'center'}}>F1 Score by Attack Type</div>
              <div className="bar-row"><span className="bar-lbl">Brute Force</span><div className="bar-track"><div className="bar-fill" style={{width: '97.8%'}}></div></div><span className="bar-val">97.8%</span></div>
@@ -171,36 +171,36 @@ export default function EvaluationReportTemplate() {
       <div className="report-grid-3">
         <div className="report-section">
           <h3 className="section-title">4. EXPLAINABILITY SUMMARY</h3>
-          <table className="perf-table full-width">
+          <div className="table-responsive"><table className="perf-table full-width">
             <tbody>
               <tr><td>Average Explanation Time</td><td className="bold">0.45 sec</td></tr>
               <tr><td>Explanation Confidence</td><td className="bold">96.2%</td></tr>
               <tr><td colSpan="2" style={{borderBottom: 'none'}}><b>Top Contributing Features:</b></td></tr>
               <tr><td colSpan="2" style={{paddingTop: 0}}>1. Login Frequency<br/>2. Resource Access Bytes<br/>3. Impossible Travel Distance</td></tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
         <div className="report-section">
           <h3 className="section-title">5. COLD-START PERFORMANCE</h3>
-          <table className="perf-table full-width">
+          <div className="table-responsive"><table className="perf-table full-width">
             <tbody>
               <tr><td>Entities in Cold-Start</td><td className="bold">142</td></tr>
               <tr><td>Avg. Profiling Time</td><td className="bold">4.2 days</td></tr>
               <tr><td>Cold-Start FPR</td><td className="bold">3.1%</td></tr>
               <tr><td>Detection Rate (New)</td><td className="bold">91.4%</td></tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
         <div className="report-section">
           <h3 className="section-title">6. CONCEPT DRIFT ANALYSIS</h3>
-          <table className="perf-table full-width">
+          <div className="table-responsive"><table className="perf-table full-width">
             <tbody>
               <tr><td>Current Global Drift</td><td className="bold">12%</td></tr>
               <tr><td>Models Retrained (30d)</td><td className="bold">2</td></tr>
               <tr><td>Status</td><td className="bold" style={{color: '#10b981'}}>STABLE</td></tr>
               <tr><td>Last Retrain</td><td className="bold">Jul 26, 2026</td></tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </div>
 
@@ -208,23 +208,23 @@ export default function EvaluationReportTemplate() {
       <div className="report-grid-3">
         <div className="report-section">
           <h3 className="section-title">7. BASELINE COMPARISON</h3>
-          <table className="perf-table full-width">
+          <div className="table-responsive"><table className="perf-table full-width">
             <tbody>
               <tr><td>Global Precision</td><td className="bold">94.2%</td></tr>
               <tr><td>Baseline Precision</td><td className="bold">96.2%</td></tr>
               <tr><td>F1 Improvement</td><td className="bold" style={{color: '#10b981'}}>+2.0%</td></tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
         <div className="report-section">
           <h3 className="section-title">8. SCALABILITY & PERF</h3>
-          <table className="perf-table full-width">
+          <div className="table-responsive"><table className="perf-table full-width">
             <tbody>
               <tr><td>Avg. Inference Time</td><td className="bold">152 ms</td></tr>
               <tr><td>Events / Sec</td><td className="bold">12.4k</td></tr>
               <tr><td>System Status</td><td className="bold" style={{color: '#10b981'}}>HEALTHY</td></tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
         <div className="report-section">
           <h3 className="section-title">9. ALERT SEVERITY</h3>

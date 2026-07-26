@@ -342,7 +342,7 @@ export default function DataGenerator() {
            DATA PREVIEW <span style={{fontSize: '0.7rem', color: 'var(--text-secondary)'}}>(Sample of synthetic data)</span>
          </h3>
          <div className="table-container" style={{height: '250px'}}>
-             <table className="alerts-table" style={{marginTop: 0, fontSize: '0.7rem'}}>
+             <div className="table-responsive"><table className="alerts-table" style={{marginTop: 0, fontSize: '0.7rem'}}>
                <thead><tr><th>entity_id</th><th>entity_type</th><th>timestamp</th><th>source_ip</th><th>geo_location</th><th>resource_accessed</th><th>auth_method</th><th>session_duration</th><th>command_sequence</th><th>device_fingerprint</th></tr></thead>
                <tbody>
                   {recentEvents.length > 0 ? (
@@ -369,7 +369,7 @@ export default function DataGenerator() {
                     </>
                   )}
                </tbody>
-            </table>
+            </table></div>
          </div>
       </div>
 

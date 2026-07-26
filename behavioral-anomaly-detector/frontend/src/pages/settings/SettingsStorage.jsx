@@ -64,7 +64,7 @@ export default function SettingsStorage({ config, handleChange, handleSave, hand
             <h3 className="panel-title" style={{color: 'var(--text-primary)'}}><span style={{color:'var(--accent-purple)'}}>1.</span> Data Retention Policy</h3>
             <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem'}}>Configure how long different types of data are retained.</p>
             
-            <table className="settings-table" style={{fontSize: '0.75rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.75rem'}}>
                <thead>
                  <tr>
                    <th>Data Type</th>
@@ -88,7 +88,7 @@ export default function SettingsStorage({ config, handleChange, handleSave, hand
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
 
             <div style={{marginTop: '1rem'}}>
                <button className="btn-outline" style={{padding: '0.3rem 0.6rem', fontSize: '0.7rem'}} onClick={handleAddRetention}><Plus size={12} style={{marginRight: '0.3rem'}}/> Add Retention Rule</button>
@@ -264,7 +264,7 @@ export default function SettingsStorage({ config, handleChange, handleSave, hand
                <button className="btn-outline" style={{padding: '0.3rem 0.6rem', fontSize: '0.7rem'}} onClick={() => handleAction("Storage Overview")}><HardDrive size={12} style={{marginRight: '0.3rem'}}/> Storage Overview</button>
             </div>
 
-            <table className="settings-table" style={{fontSize: '0.7rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.7rem'}}>
                <thead>
                  <tr>
                    <th>Source Name</th>
@@ -288,7 +288,7 @@ export default function SettingsStorage({ config, handleChange, handleSave, hand
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             
             <div style={{marginTop: '1rem'}}>
                <button className="btn-outline" style={{padding: '0.3rem 0.6rem', fontSize: '0.7rem'}} onClick={handleAddSource}><Plus size={12} style={{marginRight: '0.3rem'}}/> Add Data Source</button>

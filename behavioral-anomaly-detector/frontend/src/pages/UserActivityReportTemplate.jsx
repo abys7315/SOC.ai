@@ -84,7 +84,7 @@ export default function UserActivityReportTemplate() {
         <h3 className="section-title">2. LOGIN OVERVIEW</h3>
         <div className="report-grid-2">
           <div className="table-wrapper">
-             <table className="perf-table">
+             <div className="table-responsive"><table className="perf-table">
                <thead>
                  <tr><th>Metric</th><th>This Period</th><th>Last 7 Days</th><th>Change (%)</th></tr>
                </thead>
@@ -96,7 +96,7 @@ export default function UserActivityReportTemplate() {
                  <tr><td>Average Attempts per User</td><td className="bold">14.36</td><td>13.71</td><td className="green">↑ 4.74%</td></tr>
                  <tr><td>Unique Users Logged In</td><td className="bold">1,285</td><td>1,142</td><td className="green">↑ 12.40%</td></tr>
                </tbody>
-             </table>
+             </table></div>
           </div>
           <div className="chart-placeholder">
              <div style={{width: '100%', padding: '0 10px'}}>
@@ -149,7 +149,7 @@ export default function UserActivityReportTemplate() {
       <div className="report-section">
         <h3 className="section-title">4. ACTIVITY BY USER ROLES</h3>
         <div className="report-grid-2" style={{gridTemplateColumns: '3fr 2fr'}}>
-          <table className="perf-table full-width">
+          <div className="table-responsive"><table className="perf-table full-width">
             <thead>
               <tr><th>Role</th><th>Total Users</th><th>Active Users</th><th>Login Attempts</th><th>Success Rate</th></tr>
             </thead>
@@ -163,7 +163,7 @@ export default function UserActivityReportTemplate() {
               <tr><td>Auditor</td><td>50</td><td>42</td><td>230</td><td>99.00%</td></tr>
               <tr><td>Others</td><td>24</td><td>18</td><td>62</td><td>92.50%</td></tr>
             </tbody>
-          </table>
+          </table></div>
           <div className="chart-placeholder" style={{flexDirection: 'column'}}>
             <div style={{fontWeight: 'bold', marginBottom: '10px', fontSize: '9px'}}>Role-wise Activity Distribution</div>
             <div style={{width: '80px', height: '80px', borderRadius: '50%', border: '15px solid #0ea5e9', borderTopColor: '#f59e0b', borderRightColor: '#8b5cf6', borderBottomColor: '#10b981', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -201,7 +201,7 @@ export default function UserActivityReportTemplate() {
           </div>
           <div className="table-wrapper">
              <div style={{fontWeight: 'bold', marginBottom: '5px', fontSize: '8px', padding: '5px'}}>Top Risky Users</div>
-             <table className="perf-table full-width" style={{fontSize: '7px'}}>
+             <div className="table-responsive"><table className="perf-table full-width" style={{fontSize: '7px'}}>
                <thead><tr><th>User ID</th><th>Risk Level</th><th>Risk Score</th></tr></thead>
                <tbody>
                  <tr><td>usr_admin</td><td className="red bold">Critical</td><td>98</td></tr>
@@ -209,7 +209,7 @@ export default function UserActivityReportTemplate() {
                  <tr><td>usr_8872</td><td style={{color: '#f97316', fontWeight: 'bold'}}>High</td><td>85</td></tr>
                  <tr><td>usr_2214</td><td style={{color: '#f97316', fontWeight: 'bold'}}>High</td><td>79</td></tr>
                </tbody>
-             </table>
+             </table></div>
           </div>
         </div>
       </div>
@@ -217,7 +217,7 @@ export default function UserActivityReportTemplate() {
       {/* 6. TOP USERS BY ACTIVITY */}
       <div className="report-section">
         <h3 className="section-title">6. TOP USERS BY ACTIVITY</h3>
-        <table className="perf-table full-width" style={{fontSize: '7px'}}>
+        <div className="table-responsive"><table className="perf-table full-width" style={{fontSize: '7px'}}>
           <thead>
             <tr><th>Rank</th><th>User</th><th>Department</th><th>Role</th><th>Total Logins</th><th>Success</th><th>Failed</th><th>Unique IPs</th><th>Last Login Time</th><th>Risk Score</th><th>Risk Level</th></tr>
           </thead>
@@ -239,14 +239,14 @@ export default function UserActivityReportTemplate() {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       {/* 7. ANOMALOUS ACTIVITY SUMMARY */}
       <div className="report-section">
         <h3 className="section-title">7. ANOMALOUS ACTIVITY SUMMARY</h3>
         <div className="report-grid-3">
-          <table className="perf-table full-width">
+          <div className="table-responsive"><table className="perf-table full-width">
             <thead><tr><th>Anomalous Activities Detected</th><th>Count</th></tr></thead>
             <tbody>
               <tr><td>Impossible Travel Detected</td><td className="bold">18</td></tr>
@@ -256,7 +256,7 @@ export default function UserActivityReportTemplate() {
               <tr><td>Privilege Escalation</td><td className="bold">4</td></tr>
               <tr><td className="bold">Total Anomalous Events</td><td className="bold">171</td></tr>
             </tbody>
-          </table>
+          </table></div>
           <div className="chart-placeholder" style={{flexDirection: 'column', alignItems: 'flex-start', padding: '10px'}}>
              <div style={{fontWeight: 'bold', marginBottom: '5px', fontSize: '8px'}}>Anomalous Activities Over Time</div>
              <div style={{width: '100%', height: '60px', borderLeft: '1px solid #999', borderBottom: '1px solid #999', position: 'relative'}}>

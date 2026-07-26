@@ -103,7 +103,7 @@ export default function SettingsAPI({ config, handleChange, handleSave, handleAc
                <button className="btn-outline" style={{padding: '0.2rem 0.5rem', fontSize: '0.65rem'}} onClick={handleAddApiKey}><Plus size={10} style={{marginRight: '0.2rem'}}/> Generate API Key</button>
             </div>
 
-            <table className="settings-table" style={{fontSize: '0.65rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.65rem'}}>
                <thead>
                  <tr>
                    <th>Key Name</th>
@@ -129,7 +129,7 @@ export default function SettingsAPI({ config, handleChange, handleSave, handleAc
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             
             <div style={{marginTop: '1rem'}}>
               <span style={{fontSize: '0.7rem', color: 'var(--accent-purple)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.3rem'}}><ExternalLink size={12}/> View API Documentation</span>
@@ -180,7 +180,7 @@ export default function SettingsAPI({ config, handleChange, handleSave, handleAc
                <button className="btn-outline" style={{padding: '0.3rem 0.6rem', fontSize: '0.7rem'}} onClick={handleAddWebhook}><Plus size={12} style={{marginRight: '0.3rem'}}/> Add Webhook</button>
             </div>
 
-            <table className="settings-table" style={{fontSize: '0.65rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.65rem'}}>
                <thead>
                  <tr>
                    <th>Webhook Name</th>
@@ -204,14 +204,14 @@ export default function SettingsAPI({ config, handleChange, handleSave, handleAc
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
 
             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1.5rem', marginBottom: '0.5rem'}}>
                <div style={{fontSize: '0.75rem', color: 'var(--text-primary)'}}>Recent Delivery Logs</div>
                <span style={{fontSize: '0.7rem', color: 'var(--accent-purple)', cursor: 'pointer'}}>View All Logs</span>
             </div>
 
-            <table className="settings-table" style={{fontSize: '0.65rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.65rem'}}>
                <tbody>
                  {[
                    {time: 'Jul 26, 2026 10:24:01 AM', event: 'Security Alerts', status: 'Delivered', lat: '240ms'},
@@ -227,7 +227,7 @@ export default function SettingsAPI({ config, handleChange, handleSave, handleAc
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
           </div>
 
           <div className="glass-panel">
@@ -246,7 +246,7 @@ export default function SettingsAPI({ config, handleChange, handleSave, handleAc
                <button className="btn-outline" style={{padding: '0.2rem 0.5rem', fontSize: '0.65rem'}} onClick={handleAddIp}><Plus size={10} style={{marginRight: '0.2rem'}}/> Add IP</button>
             </div>
 
-            <table className="settings-table" style={{fontSize: '0.65rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.65rem'}}>
                <thead>
                  <tr>
                    <th>IP Address / CIDR</th>
@@ -268,7 +268,7 @@ export default function SettingsAPI({ config, handleChange, handleSave, handleAc
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
 
             <div style={{fontSize: '0.7rem', color: 'var(--accent-purple)', display: 'flex', alignItems: 'flex-start', gap: '0.5rem', marginTop: '1rem'}}>
                <Info size={14} style={{flexShrink: 0}}/> Only requests from allowed IPs will be accepted.

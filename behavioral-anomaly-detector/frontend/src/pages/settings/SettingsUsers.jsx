@@ -86,7 +86,7 @@ export default function SettingsUsers({ config, handleChange, handleSave, handle
                <select className="select-input" style={{width: '120px'}}><option>All Roles</option></select>
             </div>
 
-            <table className="settings-table" style={{fontSize: '0.7rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.7rem'}}>
                <thead>
                  <tr>
                    <th>User</th>
@@ -116,7 +116,7 @@ export default function SettingsUsers({ config, handleChange, handleSave, handle
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             
             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem', fontSize: '0.7rem', color: 'var(--text-secondary)'}}>
                <span>Showing 1 to {userList.length} of {userList.length} users</span>
@@ -148,7 +148,7 @@ export default function SettingsUsers({ config, handleChange, handleSave, handle
                </div>
             </div>
 
-            <table className="settings-table" style={{fontSize: '0.65rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.65rem'}}>
                <thead>
                  <tr>
                    <th>Module</th>
@@ -185,7 +185,7 @@ export default function SettingsUsers({ config, handleChange, handleSave, handle
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             
             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem'}}>
                <div style={{display: 'flex', gap: '1rem', fontSize: '0.65rem', color: 'var(--text-secondary)'}}>
@@ -209,7 +209,7 @@ export default function SettingsUsers({ config, handleChange, handleSave, handle
                <button className="btn-outline" style={{padding: '0.3rem 0.6rem', fontSize: '0.7rem'}} onClick={handleAddRole}><Plus size={12} style={{marginRight: '0.3rem'}}/> Add Role</button>
             </div>
 
-            <table className="settings-table" style={{fontSize: '0.7rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.7rem'}}>
                <thead>
                  <tr>
                    <th>Role Name</th>
@@ -231,7 +231,7 @@ export default function SettingsUsers({ config, handleChange, handleSave, handle
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             <div style={{fontSize: '0.65rem', color: 'var(--text-secondary)', marginTop: '0.5rem'}}>Showing 1 to {roleList.length} of {roleList.length} roles</div>
           </div>
 

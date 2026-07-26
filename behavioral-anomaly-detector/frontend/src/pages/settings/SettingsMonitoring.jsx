@@ -68,7 +68,7 @@ export default function SettingsMonitoring({ config, handleChange, handleSave, h
                <select className="select-input" style={{width: '90px', padding: '0.2rem 0.4rem', fontSize: '0.65rem'}}><option>Last 24 Hours</option></select>
             </div>
             
-            <table className="settings-table" style={{fontSize: '0.65rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.65rem'}}>
                <thead>
                  <tr>
                    <th>Server Name</th>
@@ -114,7 +114,7 @@ export default function SettingsMonitoring({ config, handleChange, handleSave, h
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             
             <div style={{marginTop: '1rem'}}>
               <span style={{fontSize: '0.7rem', color: 'var(--accent-purple)', cursor: 'pointer'}}>View Resource Details</span>
@@ -128,7 +128,7 @@ export default function SettingsMonitoring({ config, handleChange, handleSave, h
             <h3 className="panel-title" style={{color: 'var(--text-primary)'}}><span style={{color:'var(--accent-purple)'}}>2.</span> Services Status</h3>
             <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem'}}>Monitor all system services and their current status.</p>
             
-            <table className="settings-table" style={{fontSize: '0.65rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.65rem'}}>
                <thead>
                  <tr>
                    <th>Service Name</th>
@@ -156,7 +156,7 @@ export default function SettingsMonitoring({ config, handleChange, handleSave, h
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             
             <div style={{marginTop: '1rem'}}>
               <span style={{fontSize: '0.7rem', color: 'var(--accent-purple)', cursor: 'pointer'}}>View All Services</span>
@@ -167,7 +167,7 @@ export default function SettingsMonitoring({ config, handleChange, handleSave, h
             <h3 className="panel-title" style={{color: 'var(--text-primary)'}}><span style={{color:'var(--accent-purple)'}}>5.</span> Integrations Health</h3>
             <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem'}}>Health status of external integrations.</p>
             
-            <table className="settings-table" style={{fontSize: '0.65rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.65rem'}}>
                <thead>
                  <tr>
                    <th>Integration Name</th>
@@ -200,7 +200,7 @@ export default function SettingsMonitoring({ config, handleChange, handleSave, h
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             
             <div style={{marginTop: '1rem'}}>
               <span style={{fontSize: '0.7rem', color: 'var(--accent-purple)', cursor: 'pointer'}}>Manage Integrations</span>

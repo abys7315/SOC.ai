@@ -224,7 +224,7 @@ export default function AttackInjection({ alerts = [] }) {
                <span style={{fontSize: '0.75rem', color: 'var(--accent-green)', display: 'flex', alignItems: 'center', gap: '0.4rem'}}><div className="live-dot"></div> Live</span>
              </h3>
              <div className="table-container">
-               <table className="alerts-table" style={{marginTop: '0'}}>
+               <div className="table-responsive"><table className="alerts-table" style={{marginTop: '0'}}>
                  <thead>
                    <tr>
                      <th>Time</th>
@@ -251,7 +251,7 @@ export default function AttackInjection({ alerts = [] }) {
                      </tr>
                    ))}
                  </tbody>
-               </table>
+               </table></div>
              </div>
              <div style={{display: 'flex', justifyContent: 'space-between', padding: '1rem', borderTop: '1px solid rgba(255,255,255,0.05)', fontSize: '0.8rem', color: 'var(--text-secondary)'}}>
                 <span style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}><Activity size={14}/> Streaming live events from generator to detection engine...</span>

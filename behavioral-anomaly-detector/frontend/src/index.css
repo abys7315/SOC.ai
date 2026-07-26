@@ -441,6 +441,12 @@ select:focus {
   background: rgba(0, 240, 255, 0.05);
 }
 
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ==========================================================================
    RESPONSIVE DESIGN (PHASE 5)
    ========================================================================== */

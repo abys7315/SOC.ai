@@ -124,7 +124,7 @@ export default function Evaluation() {
         <div className="glass-panel col-span-3">
           <h3 className="panel-title">Performance by Attack Type</h3>
           <div style={{overflowX: 'auto'}}>
-            <table className="alerts-table" style={{marginTop: 0, minWidth: '450px'}}>
+            <div className="table-responsive"><table className="alerts-table" style={{marginTop: 0, minWidth: '450px'}}>
               <thead>
                 <tr><th>Attack Type</th><th>Precision</th><th>Recall</th><th>F1</th><th>Alerts</th></tr>
               </thead>
@@ -137,7 +137,7 @@ export default function Evaluation() {
                 <tr><td><span style={{color: '#eab308'}}>Low & Slow Exfiltration</span></td><td>92.45%</td><td>89.15%</td><td>90.77%</td><td>18</td></tr>
                 <tr><td><span style={{color: '#f59e0b'}}>Insider Drift</span></td><td>91.30%</td><td>88.45%</td><td>89.85%</td><td>12</td></tr>
               </tbody>
-            </table>
+            </table></div>
           </div>
         </div>
 
@@ -262,7 +262,7 @@ export default function Evaluation() {
         <div className="glass-panel col-span-2">
           <h3 className="panel-title">Model Performance by Version</h3>
           <div style={{overflowX: 'auto'}}>
-            <table className="alerts-table" style={{marginTop: 0, minWidth: '550px'}}>
+            <div className="table-responsive"><table className="alerts-table" style={{marginTop: 0, minWidth: '550px'}}>
               <thead>
                 <tr><th>Version</th><th>Accuracy</th><th>F1 Score</th><th>Avg Inference Time</th><th>Deployed On</th><th>Status</th></tr>
               </thead>
@@ -272,7 +272,7 @@ export default function Evaluation() {
                 <tr><td>v2.1.5</td><td>95.12%</td><td>93.18%</td><td>162 ms</td><td>Jul 17, 2026</td><td><span className="status-badge" style={{color: 'var(--text-secondary)', borderColor: 'var(--text-secondary)', background: 'transparent'}}>Archived</span></td></tr>
                 <tr><td>v2.0.0</td><td>91.22%</td><td>88.41%</td><td>185 ms</td><td>Jul 17, 2026</td><td><span className="status-badge" style={{color: 'var(--text-secondary)', borderColor: 'var(--text-secondary)', background: 'transparent'}}>Archived</span></td></tr>
               </tbody>
-            </table>
+            </table></div>
           </div>
         </div>
 
@@ -283,7 +283,7 @@ export default function Evaluation() {
           <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginTop: '1rem'}}>
              <div>
                 <h4 style={{fontSize: '0.85rem', color: 'var(--accent-cyan)', marginBottom: '0.75rem', textTransform: 'uppercase'}}>Synthetic Data Schema</h4>
-                <table className="alerts-table" style={{marginTop: 0, fontSize: '0.75rem', background: 'rgba(0,0,0,0.2)'}}>
+                <div className="table-responsive"><table className="alerts-table" style={{marginTop: 0, fontSize: '0.75rem', background: 'rgba(0,0,0,0.2)'}}>
                    <thead><tr><th>Field Name</th><th>Description</th></tr></thead>
                    <tbody>
                       <tr><td>entity_id</td><td>user_id or device_id</td></tr>
@@ -297,7 +297,7 @@ export default function Evaluation() {
                       <tr><td>command_sequence</td><td>ordered list of actions taken</td></tr>
                       <tr><td>device_fingerprint</td><td>OS/firmware version, MAC address, protocol used</td></tr>
                    </tbody>
-                </table>
+                </table></div>
              </div>
              
              <div>

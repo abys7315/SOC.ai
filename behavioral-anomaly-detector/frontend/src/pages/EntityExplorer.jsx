@@ -376,7 +376,7 @@ export default function EntityExplorer({ alerts }) {
               </div>
               <div className="glass-panel table-container">
                  <h3 className="panel-title">Recent Authentication Events</h3>
-                 <table className="alerts-table">
+                 <div className="table-responsive"><table className="alerts-table">
                     <thead><tr><th>Time</th><th>IP Address</th><th>Method</th><th>Status</th></tr></thead>
                     <tbody>
                       {entityData.recent_activity && entityData.recent_activity.length > 0 ? entityData.recent_activity.map((act, i) => (
@@ -392,7 +392,7 @@ export default function EntityExplorer({ alerts }) {
                         <tr><td colSpan="4" style={{textAlign: 'center', color: 'var(--text-secondary)'}}>No recent activity found.</td></tr>
                       )}
                     </tbody>
-                 </table>
+                 </table></div>
               </div>
             </div>
           )}
@@ -416,7 +416,7 @@ export default function EntityExplorer({ alerts }) {
               </div>
               <div className="glass-panel table-container">
                  <h3 className="panel-title">Access Logs</h3>
-                 <table className="alerts-table">
+                 <div className="table-responsive"><table className="alerts-table">
                     <thead><tr><th>Time</th><th>Action / Resource</th><th>IP Address</th><th>Status</th></tr></thead>
                     <tbody>
                       {entityData.recent_activity && entityData.recent_activity.length > 0 ? entityData.recent_activity.map((act, i) => (
@@ -432,7 +432,7 @@ export default function EntityExplorer({ alerts }) {
                         <tr><td colSpan="4" style={{textAlign: 'center', color: 'var(--text-secondary)'}}>No access logs found.</td></tr>
                       )}
                     </tbody>
-                 </table>
+                 </table></div>
               </div>
             </div>
           )}
@@ -441,7 +441,7 @@ export default function EntityExplorer({ alerts }) {
           {activeTab.startsWith('Alerts') && (
             <div className="glass-panel col-span-3 table-container">
                <h3 className="panel-title">All Historical Alerts for {entityData.id}</h3>
-               <table className="alerts-table">
+               <div className="table-responsive"><table className="alerts-table">
                   <thead><tr><th>Time</th><th>Anomaly Type</th><th>Risk Score</th><th>Status</th></tr></thead>
                   <tbody>
                     {entityData.historical_alerts && entityData.historical_alerts.length > 0 ? entityData.historical_alerts.map((alert, i) => (
@@ -455,7 +455,7 @@ export default function EntityExplorer({ alerts }) {
                       <tr><td colSpan="4" style={{textAlign: 'center', color: 'var(--text-secondary)'}}>No historical alerts found.</td></tr>
                     )}
                   </tbody>
-               </table>
+               </table></div>
             </div>
           )}
 

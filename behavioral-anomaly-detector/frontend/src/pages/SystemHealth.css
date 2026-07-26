@@ -181,3 +181,9 @@
   font-size: 0.65rem;
   color: var(--text-secondary);
 }
+
+@media screen and (max-width: 768px) {
+  .health-grid { grid-template-columns: 1fr; }
+  .node-grid { grid-template-columns: 1fr; }
+  .health-layout { flex-direction: column; }
+}

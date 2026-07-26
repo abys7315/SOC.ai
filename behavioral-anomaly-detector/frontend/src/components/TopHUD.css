@@ -244,3 +244,40 @@
   color: var(--text-secondary);
   opacity: 0.7;
 }
+
+.mobile-menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hud-time {
+    display: none;
+  }
+  .status-text {
+    display: none;
+  }
+  .status-pill {
+    padding: 0.4rem;
+    border-radius: 50%;
+  }
+  .hud-left h1 {
+    font-size: 1rem;
+  }
+  .hud-right {
+    gap: 0.75rem;
+  }
+  .search-bar-container {
+    width: 140px;
+  }
+  .notification-dropdown {
+    width: 280px;
+    right: -20px;
+  }
+  .mobile-menu-btn {
+    display: flex;
+  }
+}

@@ -254,7 +254,7 @@ export default function Alerts({ alerts: initialAlerts }) {
 
           {/* Alert Table */}
           <div className="glass-panel alerts-table-container">
-            <table className="alerts-table">
+            <div className="table-responsive"><table className="alerts-table">
               <thead>
                 <tr>
                   <th>Time</th>
@@ -307,7 +307,7 @@ export default function Alerts({ alerts: initialAlerts }) {
                   )
                 })}
               </tbody>
-            </table>
+            </table></div>
           </div>
 
 

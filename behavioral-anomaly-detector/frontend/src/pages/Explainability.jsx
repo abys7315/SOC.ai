@@ -196,7 +196,7 @@ export default function Explainability() {
         {/* 2. Top Contributing Factors */}
         <div className="glass-panel col-span-2">
            <h3 className="panel-title">2. TOP CONTRIBUTING FACTORS</h3>
-           <table className="factors-table">
+           <div className="table-responsive"><table className="factors-table">
              <thead>
                <tr>
                  <th style={{width: '30%'}}>Feature</th>
@@ -262,7 +262,7 @@ export default function Explainability() {
                  </td>
                </tr>
              </tbody>
-           </table>
+           </table></div>
         </div>
 
         {/* 3. Feature Importance */}
@@ -299,7 +299,7 @@ export default function Explainability() {
         {/* 4. Expected vs Observed */}
         <div className="glass-panel">
           <h3 className="panel-title">4. EXPECTED VS OBSERVED BEHAVIOR</h3>
-          <table className="alerts-table" style={{marginTop: 0}}>
+          <div className="table-responsive"><table className="alerts-table" style={{marginTop: 0}}>
              <thead>
                <tr><th>Behavior</th><th>Expected (Normal)</th><th>Observed (This Event)</th></tr>
              </thead>
@@ -330,7 +330,7 @@ export default function Explainability() {
                  <td style={{color: '#f59e0b'}}>{alert.anomaly_type === 'device_spoofing' ? 'Unknown Proxy Node' : baseline.devices.split(',')[0]}</td>
                </tr>
              </tbody>
-          </table>
+          </table></div>
         </div>
 
         {/* 5. Sequence & Temporal Context */}
@@ -561,7 +561,7 @@ export default function Explainability() {
             <h3 className="panel-title">MODEL ENSEMBLE INSIGHTS</h3>
             <p style={{fontSize: '0.85rem', color: 'var(--text-secondary)'}}>Transparency report for the sequence models that evaluated this transaction.</p>
             
-            <table className="alerts-table" style={{marginTop: '1.5rem'}}>
+            <div className="table-responsive"><table className="alerts-table" style={{marginTop: '1.5rem'}}>
               <thead>
                 <tr>
                   <th>Model Subsystem</th>
@@ -601,7 +601,7 @@ export default function Explainability() {
                   </>
                 )}
               </tbody>
-            </table>
+            </table></div>
           </div>
         </div>
       )}

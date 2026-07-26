@@ -40,7 +40,7 @@ export default function TopHUD({ title, connectionStatus, toggleSidebar, alerts 
   return (
     <header className="top-hud">
       <div className="hud-left" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-        <button className="mobile-menu-btn" style={{display: 'none'}} onClick={toggleSidebar}>
+        <button className="mobile-menu-btn" onClick={toggleSidebar}>
            <Menu size={20} />
         </button>
         <h1>{title}</h1>
@@ -48,7 +48,7 @@ export default function TopHUD({ title, connectionStatus, toggleSidebar, alerts 
       <div className="hud-right">
         <div className={`status-pill ${connectionStatus.includes('LOST') ? 'disconnected' : 'connected'}`}>
           <div className="status-dot"></div>
-          {connectionStatus.includes('LOST') ? 'RECONNECTING...' : 'LIVE'}
+          <span className="status-text">{connectionStatus.includes('LOST') ? 'RECONNECTING...' : 'LIVE'}</span>
         </div>
         
         <div className="hud-time">

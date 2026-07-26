@@ -249,7 +249,7 @@ export default function SettingsLogs({ config, handleChange, handleSave, handleA
          {auditLogs.length === 0 ? (
            <div style={{padding: '2rem', textAlign: 'center', color: 'var(--text-secondary)'}}>No audit logs found. Change a setting to generate one!</div>
          ) : (
-           <table className="alerts-table" style={{marginTop: '0.5rem'}}>
+           <div className="table-responsive"><table className="alerts-table" style={{marginTop: '0.5rem'}}>
              <thead>
                <tr>
                  <th>Timestamp</th>
@@ -268,7 +268,7 @@ export default function SettingsLogs({ config, handleChange, handleSave, handleA
                  </tr>
                ))}
              </tbody>
-           </table>
+           </table></div>
          )}
        </div>
     </div> 

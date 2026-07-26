@@ -281,7 +281,7 @@ export default function Dashboard({ alerts }) {
             </div>
             
             <div className="table-container">
-              <table className="stream-table">
+              <div className="table-responsive"><table className="stream-table">
                 <thead>
                   <tr>
                     <th>Time</th>
@@ -317,7 +317,7 @@ export default function Dashboard({ alerts }) {
                     )
                   })}
                 </tbody>
-              </table>
+              </table></div>
               {displayAlerts.length === 0 && (
                 <div className="empty-state" style={{marginTop: '2rem'}}>AWAITING TELEMETRY...</div>
               )}

@@ -125,7 +125,7 @@ export default function SettingsBackup({ config, handleChange, handleSave, handl
             <h3 className="panel-title" style={{color: 'var(--text-primary)'}}><span style={{color:'var(--accent-purple)'}}>3.</span> Backup History</h3>
             <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem'}}>Recent automated and manual backups.</p>
             
-            <table className="settings-table" style={{fontSize: '0.65rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.65rem'}}>
                <thead>
                  <tr>
                    <th>Date / Time</th>
@@ -144,7 +144,7 @@ export default function SettingsBackup({ config, handleChange, handleSave, handl
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
             
             <div style={{marginTop: '1rem'}}>
               <span style={{fontSize: '0.7rem', color: 'var(--accent-purple)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.3rem'}}><Download size={12}/> Download Full Audit Log</span>

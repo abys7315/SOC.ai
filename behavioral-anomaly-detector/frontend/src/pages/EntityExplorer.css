@@ -274,3 +274,9 @@
 .step-title { font-size: 0.75rem; font-weight: bold; color: var(--text-primary); }
 .step-desc { font-size: 0.7rem; color: var(--text-secondary); }
 .step-time { font-size: 0.65rem; color: var(--text-secondary); font-family: 'Orbitron', sans-serif; }
+
+@media screen and (max-width: 768px) {
+  .entity-layout { flex-direction: column; }
+  .entity-sidebar { width: 100%; max-height: none; }
+  .info-grid { grid-template-columns: 1fr; }
+}

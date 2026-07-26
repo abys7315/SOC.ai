@@ -21,7 +21,7 @@ export default function SettingsAlerts({ config, handleChange, handleSave, handl
             <h3 className="panel-title" style={{color: 'var(--text-primary)'}}><span style={{color:'var(--accent-purple)'}}>1.</span> Notification Channels</h3>
             <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem'}}>Configure how and where alerts are delivered.</p>
             
-            <table className="settings-table" style={{fontSize: '0.75rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.75rem'}}>
                <thead>
                  <tr>
                    <th>Channel</th>
@@ -48,7 +48,7 @@ export default function SettingsAlerts({ config, handleChange, handleSave, handl
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
 
             <div style={{marginTop: '1rem'}}>
                <button className="btn-outline" style={{fontSize: '0.75rem', padding: '0.4rem 0.8rem'}} onClick={() => handleAction("Add Notification Channel")}><Plus size={14} style={{marginRight:'0.3rem'}}/> Add Notification Channel</button>
@@ -59,7 +59,7 @@ export default function SettingsAlerts({ config, handleChange, handleSave, handl
             <h3 className="panel-title" style={{color: 'var(--text-primary)'}}><span style={{color:'var(--accent-purple)'}}>4.</span> Escalation Policies</h3>
             <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem'}}>Configure escalation rules for unresolved alerts.</p>
             
-            <table className="settings-table" style={{fontSize: '0.7rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.7rem'}}>
                <thead>
                  <tr>
                    <th>Severity</th>
@@ -88,7 +88,7 @@ export default function SettingsAlerts({ config, handleChange, handleSave, handl
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
 
             <div style={{marginTop: '1rem'}}>
                <button className="btn-outline" style={{fontSize: '0.75rem', padding: '0.4rem 0.8rem'}} onClick={() => handleAction("Add Escalation Policy")}><Plus size={14} style={{marginRight:'0.3rem'}}/> Add Escalation Policy</button>
@@ -102,7 +102,7 @@ export default function SettingsAlerts({ config, handleChange, handleSave, handl
             <h3 className="panel-title" style={{color: 'var(--text-primary)'}}><span style={{color:'var(--accent-purple)'}}>2.</span> Alert Severity Levels</h3>
             <p style={{fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem'}}>Define severity levels and their characteristics.</p>
             
-            <table className="settings-table" style={{fontSize: '0.7rem'}}>
+            <div className="table-responsive"><table className="settings-table" style={{fontSize: '0.7rem'}}>
                <thead>
                  <tr>
                    <th>Severity</th>
@@ -132,7 +132,7 @@ export default function SettingsAlerts({ config, handleChange, handleSave, handl
                    </tr>
                  ))}
                </tbody>
-            </table>
+            </table></div>
 
             <div style={{marginTop: '1rem'}}>
                <button className="btn-outline" style={{fontSize: '0.75rem', padding: '0.4rem 0.8rem'}} onClick={() => handleAction("Add Severity Level")}><Plus size={14} style={{marginRight:'0.3rem'}}/> Add Severity Level</button>
