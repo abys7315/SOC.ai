@@ -235,7 +235,27 @@
   text-align: center;
 }
 
+.attack-types-panel {
+  flex: 2 1 450px;
+}
+
+.attack-controls-panel {
+  flex: 1 1 250px;
+}
+
+.attack-preview-panel {
+  flex: 1;
+}
+
 @media screen and (max-width: 768px) {
   .injection-layout { flex-direction: column; }
   .injection-sidebar { width: 100%; height: auto; }
+  .injection-top-row { flex-direction: column; }
+  .attack-types-panel, .attack-controls-panel {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
 }

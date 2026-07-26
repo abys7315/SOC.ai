@@ -83,7 +83,17 @@ export default function Dashboard({ alerts }) {
     return () => ws.close();
   }, []);
 
-  const displayAlerts = alerts.filter(a => !isolatedEntities.has(a.entity_id));
+  const dummyAlerts = [
+    { id: 'mock-1', timestamp: new Date(Date.now() - 300000).toISOString(), entity_id: 'user_1287', anomaly_type: 'impossible_travel', risk_score: 0.92, explanation: 'Logged in from two distant locations.', event_details: { action: 'api/login', source_ip: '45.33.12.9' } },
+    { id: 'mock-2', timestamp: new Date(Date.now() - 600000).toISOString(), entity_id: 'svc_web', anomaly_type: 'brute_force', risk_score: 0.75, explanation: 'Multiple failed logins.', event_details: { action: 'api/auth', source_ip: '10.10.45.22' } },
+    { id: 'mock-3', timestamp: new Date(Date.now() - 900000).toISOString(), entity_id: 'user_8892', anomaly_type: 'lateral_movement', risk_score: 0.85, explanation: 'Accessing unauthorized servers.', event_details: { action: 'ssh', source_ip: '192.168.1.15' } },
+    { id: 'mock-4', timestamp: new Date(Date.now() - 1200000).toISOString(), entity_id: 'dev_win_44', anomaly_type: 'data_exfiltration', risk_score: 0.45, explanation: 'Unusual large upload.', event_details: { action: 'ftp_upload', source_ip: '10.10.10.50' } },
+    { id: 'mock-5', timestamp: new Date(Date.now() - 1500000).toISOString(), entity_id: 'user_1287', anomaly_type: 'credential_stuffing', risk_score: 0.88, explanation: 'Multiple logins across accounts.', event_details: { action: 'api/login', source_ip: '45.33.12.9' } },
+    { id: 'mock-6', timestamp: new Date(Date.now() - 1800000).toISOString(), entity_id: 'dev_mac_09', anomaly_type: 'device_spoofing', risk_score: 0.65, explanation: 'New device footprint.', event_details: { action: 'vpn_connect', source_ip: '102.44.2.1' } }
+  ];
+  
+  const activeAlertsSource = alerts && alerts.length > 0 ? alerts : dummyAlerts;
+  const displayAlerts = activeAlertsSource.filter(a => !isolatedEntities.has(a.entity_id));
   // Aggregate Metrics
   const formatNumber = (num) => {
     if (num >= 1000000) return (num / 1000000).toFixed(2) + 'M';
@@ -99,14 +109,14 @@ export default function Dashboard({ alerts }) {
   
   const detectionAccuracy = `${liveMetrics.accuracy}%`;
   
-  const avgRiskScore = alerts.length > 0 
-    ? (alerts.reduce((sum, a) => sum + a.risk_score, 0) / alerts.length * 100).toFixed(0) 
+  const avgRiskScore = activeAlertsSource.length > 0 
+    ? (activeAlertsSource.reduce((sum, a) => sum + a.risk_score, 0) / activeAlertsSource.length * 100).toFixed(0) 
     : 0;
 
   const eventsPerSec = liveMetrics.events_per_sec;
 
   // Prepare Chart Data
-  const threatData = alerts.reduce((acc, alert) => {
+  const threatData = activeAlertsSource.reduce((acc, alert) => {
     if (alert.risk_score > 0.5) {
       acc[alert.anomaly_type] = (acc[alert.anomaly_type] || 0) + 1;
     }

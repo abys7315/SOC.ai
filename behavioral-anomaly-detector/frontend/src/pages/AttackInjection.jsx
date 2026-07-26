@@ -141,7 +141,7 @@ export default function AttackInjection({ alerts = [] }) {
           
           <div className="injection-top-row">
             {/* Attack Types */}
-            <div className="glass-panel" style={{flex: '2 1 450px'}}>
+            <div className="glass-panel attack-types-panel">
               <h3 className="panel-title">1. SELECT ATTACK TYPE TO INJECT</h3>
               <div className="attack-grid">
                 {ATTACK_TYPES.map(attack => (
@@ -163,7 +163,7 @@ export default function AttackInjection({ alerts = [] }) {
             </div>
 
             {/* Controls */}
-            <div className="glass-panel" style={{flex: '1 1 250px'}}>
+            <div className="glass-panel attack-controls-panel">
               <h3 className="panel-title">2. INJECTION CONTROLS</h3>
               
               <div className="control-group">
@@ -218,7 +218,7 @@ export default function AttackInjection({ alerts = [] }) {
           </div>
 
           {/* Stream Preview */}
-          <div className="glass-panel" style={{flex: 1}}>
+          <div className="glass-panel attack-preview-panel">
              <h3 className="panel-title" style={{display: 'flex', gap: '1rem', alignItems: 'center'}}>
                3. LIVE INJECTION STREAM PREVIEW 
                <span style={{fontSize: '0.75rem', color: 'var(--accent-green)', display: 'flex', alignItems: 'center', gap: '0.4rem'}}><div className="live-dot"></div> Live</span>
