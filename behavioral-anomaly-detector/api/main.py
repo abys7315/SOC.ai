@@ -285,7 +285,18 @@ async def inject_attack(payload: InjectPayload):
     # Because the baseline model is weakly trained and suffers from extreme class imbalance (predicting normal by default),
     # we manually override the prediction to demonstrate the UI detection capabilities for the Hackathon.
     prediction['predicted_class'] = payload.anomaly_type.upper()
-    prediction['risk_score'] = random.uniform(0.88, 0.98)
+    
+    # Adjust risk score based on chosen intensity level
+    intensity = (payload.intensity or "Critical").lower()
+    if intensity == "low":
+        prediction['risk_score'] = random.uniform(0.25, 0.40)
+    elif intensity == "medium":
+        prediction['risk_score'] = random.uniform(0.45, 0.60)
+    elif intensity == "high":
+        prediction['risk_score'] = random.uniform(0.65, 0.80)
+    else:
+        # Critical
+        prediction['risk_score'] = random.uniform(0.88, 0.98)
     
     event_details = {
         "source_ip": event['source_ip'],
