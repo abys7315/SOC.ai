@@ -12,7 +12,7 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const fetchConfig = async () => {
       try {
-        const res = await fetch('http://localhost:8000/api/settings');
+        const res = await fetch('/api/settings');
         const data = await res.json();
         setGlobalConfig(data);
         if (data?.general?.theme) {
@@ -61,7 +61,7 @@ export const AppProvider = ({ children }) => {
   // Handle configuration updates
   const updateConfig = async (newConfig) => {
     try {
-      const res = await fetch('http://localhost:8000/api/settings', {
+      const res = await fetch('/api/settings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newConfig)
@@ -82,7 +82,7 @@ export const AppProvider = ({ children }) => {
 
   const handleAction = async (actionName) => {
     try {
-      const res = await fetch('http://localhost:8000/api/generic-action', {
+      const res = await fetch('/api/generic-action', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: actionName })

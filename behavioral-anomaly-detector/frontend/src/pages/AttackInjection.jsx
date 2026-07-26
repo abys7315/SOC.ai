@@ -45,7 +45,7 @@ export default function AttackInjection({ alerts = [] }) {
 
   const handleInject = () => {
     setIsInjecting(true);
-    fetch('http://localhost:8000/api/attack/inject', {
+    fetch('/api/attack/inject', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
@@ -92,7 +92,7 @@ export default function AttackInjection({ alerts = [] }) {
   };
 
   const handleQuickAction = (actionName) => {
-    fetch('http://localhost:8000/api/generic-action', {
+    fetch('/api/generic-action', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ action: actionName })

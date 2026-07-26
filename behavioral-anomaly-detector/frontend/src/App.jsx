@@ -16,8 +16,8 @@ import Login from './pages/Login';
 import { useAppContext } from './AppContext';
 import './App.css'; // Add layout CSS
 
-const API_BASE = 'http://localhost:8000';
-const WS_URL = 'ws://localhost:8000/ws/alerts';
+const API_BASE = '';
+const WS_URL = `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/ws/alerts`;
 
 function App() {
   const { userSession, loading } = useAppContext();

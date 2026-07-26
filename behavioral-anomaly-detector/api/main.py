@@ -703,5 +703,22 @@ async def websocket_metrics(websocket: WebSocket):
     except Exception as e:
         logger.error(f"Metrics WS error: {e}")
 
+from fastapi.staticfiles import StaticFiles
+
+dist_dir = os.path.join(os.path.dirname(__file__), "..", "frontend", "dist")
+
+if os.path.exists(os.path.join(dist_dir, "assets")):
+    app.mount("/assets", StaticFiles(directory=os.path.join(dist_dir, "assets")), name="assets")
+
+@app.get("/{full_path:path}")
+async def serve_frontend(full_path: str):
+    file_path = os.path.join(dist_dir, full_path)
+    if os.path.isfile(file_path):
+        return FileResponse(file_path)
+    index_path = os.path.join(dist_dir, "index.html")
+    if os.path.isfile(index_path):
+        return FileResponse(index_path)
+    return {"error": "Frontend build not found. Please run 'npm run build' in the frontend directory."}
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

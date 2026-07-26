@@ -44,7 +44,7 @@ export default function Explainability() {
      if (type === 'verify' || type === 'reset') target = alert.entity_id;
      if (type === 'block') target = alert.event_details?.source_ip || '10.10.10.45';
 
-     fetch('http://localhost:8000/api/action', {
+     fetch('/api/action', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action_type: type, target: target })
@@ -62,7 +62,7 @@ export default function Explainability() {
 
   React.useEffect(() => {
     if (alert?.entity_id) {
-       fetch(`http://localhost:8000/api/entity/${alert.entity_id}`)
+       fetch(`/api/entity/${alert.entity_id}`)
          .then(res => res.json())
          .then(data => setEntityProfile(data))
          .catch(err => console.error("Error fetching entity profile:", err));

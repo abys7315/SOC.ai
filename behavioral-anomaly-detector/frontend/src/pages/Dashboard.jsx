@@ -61,7 +61,7 @@ export default function Dashboard({ alerts }) {
   });
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8000/ws/metrics');
+    const ws = new WebSocket(`${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/ws/metrics`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'metrics_update') {
@@ -121,7 +121,7 @@ export default function Dashboard({ alerts }) {
   const handleIsolate = async () => {
     if (isolateModalOpen) {
       try {
-        await fetch(`http://localhost:8000/api/alerts/${isolateModalOpen.id || "mock"}/action`, {
+        await fetch(`/api/alerts/${isolateModalOpen.id || "mock"}/action`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ action: 'isolated' })

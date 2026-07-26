@@ -81,7 +81,7 @@ export default function DataGenerator() {
   };
 
   React.useEffect(() => {
-    fetch('http://localhost:8000/api/generator/status')
+    fetch('/api/generator/status')
       .then(res => res.json())
       .then(data => setIsGenerating(data.running))
       .catch(err => console.error(err));
@@ -91,7 +91,7 @@ export default function DataGenerator() {
     let intervalId;
     if (isGenerating) {
       intervalId = setInterval(() => {
-        fetch('http://localhost:8000/api/generator/events')
+        fetch('/api/generator/events')
           .then(res => res.json())
           .then(data => setRecentEvents(data.events || []))
           .catch(err => console.error(err));

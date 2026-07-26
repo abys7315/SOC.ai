@@ -82,7 +82,7 @@ export default function EntityExplorer({ alerts }) {
 
 
   React.useEffect(() => {
-    fetch(`http://localhost:8000/api/entity/${entityId}`)
+    fetch(`/api/entity/${entityId}`)
       .then(res => res.json())
       .then(data => setEntityData(data))
       .catch(err => console.error(err));

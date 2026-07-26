@@ -5,7 +5,7 @@ export default function SettingsLogs({ config, handleChange, handleSave, handleA
   const [auditLogs, setAuditLogs] = useState([]);
   
   useEffect(() => {
-    fetch('http://localhost:8000/api/audit-logs')
+    fetch('/api/audit-logs')
       .then(res => res.json())
       .then(data => setAuditLogs(data.logs || []))
       .catch(err => console.error(err));
@@ -13,7 +13,7 @@ export default function SettingsLogs({ config, handleChange, handleSave, handleA
 
   const handleDownload = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/export', {
+      const res = await fetch('/api/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'csv', source: 'audit_logs' })

@@ -14,20 +14,17 @@ def main():
         os.makedirs("data/generated", exist_ok=True)
         os.makedirs("models/artifacts", exist_ok=True)
         
-        # 2. Start API
-        print("Starting FastAPI Backend...")
+        # 2. Build React Dashboard
+        print("Building React Dashboard for production...")
+        subprocess.run(["npm", "run", "build"], cwd="frontend", shell=True, check=True)
+        
+        # 3. Start API (which now serves the frontend)
+        print("Starting FastAPI Backend (serving API and Frontend on port 8000)...")
         api_proc = subprocess.Popen([sys.executable, "-m", "uvicorn", "api.main:app", "--port", "8000"])
         processes.append(api_proc)
-        time.sleep(3) # Wait for API to boot
         
-        # 3. (Removed) Data Generator is now controlled via the Data Generator UI
-        
-        # 4. Start React Dashboard
-        print("Starting React Dashboard (Vite)...")
-        dash_proc = subprocess.Popen(["npm", "run", "dev"], cwd="frontend", shell=True)
-        processes.append(dash_proc)
-        
-        print("\nAll systems running. Press Ctrl+C to stop.")
+        print("\nAll systems running. Dashboard is available at http://localhost:8000")
+        print("Press Ctrl+C to stop.")
         
         while True:
             time.sleep(1)
