@@ -66,7 +66,7 @@ function App() {
       <div className="app-layout">
         <Sidebar mobileOpen={mobileOpen} closeSidebar={() => setMobileOpen(false)} alerts={alerts} />
         <div className="main-content">
-          <TopHUD title="Dashboard Overview" connectionStatus={connectionStatus} toggleSidebar={() => setMobileOpen(true)} />
+          <TopHUD title="Dashboard Overview" connectionStatus={connectionStatus} toggleSidebar={() => setMobileOpen(true)} alerts={alerts} />
           
           {globalToast && (
             <div className="global-toast">
