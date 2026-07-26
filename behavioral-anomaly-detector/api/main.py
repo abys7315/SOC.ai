@@ -454,7 +454,7 @@ async def get_entity(entity_id: str):
         })
     
     # Map locations to geo coordinates
-    locations = entity_events['location'].dropna().unique().tolist()
+    locations = entity_events['geo_location'].dropna().unique().tolist()
     geo_coordinates = []
     for loc in locations:
         city = loc.split(',')[0].strip()
