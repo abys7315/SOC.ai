@@ -527,4 +527,12 @@ select:focus {
   .step-item {
     width: 100%;
   }
+
+  .tabs-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+    flex-wrap: nowrap;
+  }
 }

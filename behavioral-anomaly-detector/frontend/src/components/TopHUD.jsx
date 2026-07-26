@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Activity, Bell, Search, Menu, X, ShieldAlert, AlertTriangle } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './TopHUD.css';
 
-export default function TopHUD({ title, connectionStatus, toggleSidebar, alerts = [] }) {
+export default function TopHUD({ connectionStatus, toggleSidebar, alerts = [] }) {
   const [isSearching, setIsSearching] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showNotifications, setShowNotifications] = useState(false);
   const [time, setTime] = useState(new Date().toLocaleTimeString());
   const navigate = useNavigate();
+  const location = useLocation();
   const notifRef = useRef(null);
 
   useEffect(() => {
@@ -34,6 +35,22 @@ export default function TopHUD({ title, connectionStatus, toggleSidebar, alerts 
     }
   };
 
+  const getPageTitle = (path) => {
+    switch (path) {
+      case '/': return 'Dashboard Overview';
+      case '/alerts': return 'Active Alerts';
+      case '/entities': return 'Entity Explorer';
+      case '/analytics': return 'Behavior Analytics';
+      case '/injection': return 'Attack Simulator';
+      case '/explainability': return 'AI Explainability';
+      case '/evaluation': return 'Model Evaluation';
+      case '/health': return 'System Health';
+      case '/generator': return 'Data Generator';
+      case '/settings': return 'Settings';
+      default: return 'SOC Analytics';
+    }
+  };
+
   const criticalAlerts = alerts.filter(a => a.risk_score > 0.8).slice(0, 5);
   const badgeCount = criticalAlerts.length;
 
@@ -43,7 +60,7 @@ export default function TopHUD({ title, connectionStatus, toggleSidebar, alerts 
         <button className="mobile-menu-btn" onClick={toggleSidebar}>
            <Menu size={20} />
         </button>
-        <h1>{title}</h1>
+        <h1>{getPageTitle(location.pathname)}</h1>
       </div>
       <div className="hud-right">
         <div className={`status-pill ${connectionStatus.includes('LOST') ? 'disconnected' : 'connected'}`}>

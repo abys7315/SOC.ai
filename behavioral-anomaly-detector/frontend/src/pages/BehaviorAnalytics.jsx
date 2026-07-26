@@ -60,7 +60,7 @@ export default function BehaviorAnalytics() {
 
   return (
     <div className="analytics-page">
-      <div className="glass-panel" style={{display: 'flex', gap: '2rem', padding: '1rem 2rem', marginBottom: '0'}}>
+      <div className="glass-panel analytics-filters-panel">
          <div style={{display: 'flex', flexDirection: 'column'}}>
             <span style={{fontSize: '0.7rem', color: 'var(--text-secondary)'}}>Entity Type</span>
             <select value={entityType} onChange={e => {setEntityType(e.target.value); setKey(prev => prev + 1);}} style={{background: 'transparent', border: 'none', color: 'white', fontFamily: 'Inter', fontSize: '0.9rem'}}>
@@ -110,7 +110,7 @@ export default function BehaviorAnalytics() {
 {/* Activity Overview */}
         <div className="glass-panel" style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
           <h3 className="panel-title">Activity Overview <Activity size={14}/></h3>
-          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', flex: 1}}>
+          <div className="analytics-kpi-grid">
              <div className="analytics-kpi-card">
                 <div className="icon"><Activity size={20} color="var(--accent-cyan)"/></div>
                 <div className="val">1,248</div>
