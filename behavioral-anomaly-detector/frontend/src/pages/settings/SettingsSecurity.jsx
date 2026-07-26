@@ -3,8 +3,8 @@ import { Shield, Key, Lock, Eye, AlertTriangle, FileText, CheckCircle, Info, Dat
 
 export default function SettingsSecurity({ config, handleChange, handleSave, handleAction }) {
   const defaultApiKeys = [
-    {name: 'SIEM_Connector', createdBy: 'admin', createdOn: 'May 10, 2024', lastUsed: 'May 15, 2024', status: 'Active'},
-    {name: 'Mobile_App_Key', createdBy: 'sec_engineer', createdOn: 'May 12, 2024', lastUsed: 'May 14, 2024', status: 'Active'}
+    {name: 'SIEM_Connector', createdBy: 'admin', createdOn: 'Jul 23, 2026', lastUsed: 'Jul 14, 2026', status: 'Active'},
+    {name: 'Mobile_App_Key', createdBy: 'sec_engineer', createdOn: 'Jul 21, 2026', lastUsed: 'Jul 18, 2026', status: 'Active'}
   ];
   const apiKeysList = config?.security?.apiKeys || defaultApiKeys;
 
@@ -463,27 +463,27 @@ export default function SettingsSecurity({ config, handleChange, handleSave, han
             
             <div className="audit-list">
                <div className="audit-item">
-                 <div className="a-time">May 15, 2024 10:15:22 AM</div>
+                 <div className="a-time">Jul 25, 2026 10:15:22 AM</div>
                  <div className="a-action">Failed login attempts for user admin</div>
                  <div className="a-ip" style={{color: '#f59e0b'}}>Warning</div>
                </div>
                <div className="audit-item">
-                 <div className="a-time">May 15, 2024 09:45:11 AM</div>
+                 <div className="a-time">Jul 24, 2026 09:45:11 AM</div>
                  <div className="a-action">MFA verification failed for user analyst</div>
                  <div className="a-ip" style={{color: '#f59e0b'}}>Warning</div>
                </div>
                <div className="audit-item">
-                 <div className="a-time">May 14, 2024 08:32:05 AM</div>
+                 <div className="a-time">Jul 11, 2026 08:32:05 AM</div>
                  <div className="a-action">User role updated: sec_engineer</div>
                  <div className="a-ip" style={{color: 'var(--accent-cyan)'}}>Info</div>
                </div>
                <div className="audit-item">
-                 <div className="a-time">May 14, 2024 10:14:44 AM</div>
+                 <div className="a-time">Jul 14, 2026 10:14:44 AM</div>
                  <div className="a-action">API key created: Integration_01</div>
                  <div className="a-ip" style={{color: 'var(--accent-cyan)'}}>Info</div>
                </div>
                <div className="audit-item" style={{borderBottom: 'none'}}>
-                 <div className="a-time">May 13, 2024 03:55:12 AM</div>
+                 <div className="a-time">Jul 26, 2026 03:55:12 AM</div>
                  <div className="a-action">Admin login from new IP: 192.168.1.45</div>
                  <div className="a-ip" style={{color: 'var(--accent-green)'}}>Success</div>
                </div>

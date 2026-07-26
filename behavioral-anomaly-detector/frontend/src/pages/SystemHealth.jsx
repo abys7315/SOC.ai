@@ -47,7 +47,7 @@ export default function SystemHealth() {
            <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: 'var(--accent-green)'}}>
              <div className="live-dot"></div> Live System
            </div>
-           <span style={{color: 'var(--text-secondary)', fontSize: '0.8rem'}}>May 15, 2024 - 10:24 AM</span>
+           <span style={{color: 'var(--text-secondary)', fontSize: '0.8rem'}}>Jul 14, 2026 - 10:24 AM</span>
            <button className="btn-outline" style={{padding: '0.4rem 1rem'}} onClick={handleRefresh}>Refresh</button>
          </div>
       </div>

@@ -46,7 +46,7 @@ export default function Evaluation() {
            <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: 'var(--accent-green)'}}>
              <div className="live-dot"></div> Live System
            </div>
-           <span style={{color: 'var(--text-secondary)', fontSize: '0.8rem'}}>May 15, 2024 - May 15, 2024</span>
+           <span style={{color: 'var(--text-secondary)', fontSize: '0.8rem'}}>Jul 21, 2026 - Jul 22, 2026</span>
            <button onClick={exportPDF} className="btn-outline" style={{display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 1rem'}}><Download size={14}/> Export Report</button>
          </div>
       </div>
@@ -58,7 +58,7 @@ export default function Evaluation() {
         </div>
         <div className="filter-item">
           <label>Time Range</label>
-          <select><option>May 15, 2024 - May 15, 2024</option></select>
+          <select><option>Jul 19, 2026 - Jul 20, 2026</option></select>
         </div>
         <div className="filter-item">
           <label>Target Entity</label>
@@ -267,10 +267,10 @@ export default function Evaluation() {
                 <tr><th>Version</th><th>Accuracy</th><th>F1 Score</th><th>Avg Inference Time</th><th>Deployed On</th><th>Status</th></tr>
               </thead>
               <tbody>
-                <tr><td>v2.3.1 (Current)</td><td>97.42%</td><td>95.77%</td><td>152 ms</td><td>May 10, 2024</td><td><span className="status-badge" style={{color: 'var(--accent-green)', borderColor: 'var(--accent-green)', background: 'transparent'}}>Active</span></td></tr>
-                <tr><td>v2.3.0</td><td>96.87%</td><td>94.12%</td><td>148 ms</td><td>Apr 28, 2024</td><td><span className="status-badge" style={{color: 'var(--text-secondary)', borderColor: 'var(--text-secondary)', background: 'transparent'}}>Archived</span></td></tr>
-                <tr><td>v2.1.5</td><td>95.12%</td><td>93.18%</td><td>162 ms</td><td>Apr 15, 2024</td><td><span className="status-badge" style={{color: 'var(--text-secondary)', borderColor: 'var(--text-secondary)', background: 'transparent'}}>Archived</span></td></tr>
-                <tr><td>v2.0.0</td><td>91.22%</td><td>88.41%</td><td>185 ms</td><td>Mar 01, 2024</td><td><span className="status-badge" style={{color: 'var(--text-secondary)', borderColor: 'var(--text-secondary)', background: 'transparent'}}>Archived</span></td></tr>
+                <tr><td>v2.3.1 (Current)</td><td>97.42%</td><td>95.77%</td><td>152 ms</td><td>Jul 16, 2026</td><td><span className="status-badge" style={{color: 'var(--accent-green)', borderColor: 'var(--accent-green)', background: 'transparent'}}>Active</span></td></tr>
+                <tr><td>v2.3.0</td><td>96.87%</td><td>94.12%</td><td>148 ms</td><td>Jul 21, 2026</td><td><span className="status-badge" style={{color: 'var(--text-secondary)', borderColor: 'var(--text-secondary)', background: 'transparent'}}>Archived</span></td></tr>
+                <tr><td>v2.1.5</td><td>95.12%</td><td>93.18%</td><td>162 ms</td><td>Jul 17, 2026</td><td><span className="status-badge" style={{color: 'var(--text-secondary)', borderColor: 'var(--text-secondary)', background: 'transparent'}}>Archived</span></td></tr>
+                <tr><td>v2.0.0</td><td>91.22%</td><td>88.41%</td><td>185 ms</td><td>Jul 17, 2026</td><td><span className="status-badge" style={{color: 'var(--text-secondary)', borderColor: 'var(--text-secondary)', background: 'transparent'}}>Archived</span></td></tr>
               </tbody>
             </table>
           </div>

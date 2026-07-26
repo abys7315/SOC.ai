@@ -110,7 +110,7 @@ export default function SettingsBackup({ config, handleChange, handleSave, handl
             <div style={{display: 'flex', flexDirection: 'column', gap: '0.75rem', background: 'rgba(255,255,255,0.02)', padding: '0.75rem', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.05)'}}>
                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                  <span style={{fontSize: '0.75rem', color: 'var(--text-primary)'}}>Latest Snapshot</span>
-                 <span style={{fontSize: '0.65rem', color: 'var(--accent-cyan)'}}>May 24, 2024 (03:00 AM)</span>
+                 <span style={{fontSize: '0.65rem', color: 'var(--accent-cyan)'}}>Jul 26, 2026 (03:00 AM)</span>
                </div>
                <button className="btn-outline" style={{padding: '0.4rem', fontSize: '0.75rem', color: 'var(--accent-red)', borderColor: 'rgba(255,0,60,0.3)', width: '100%', display: 'flex', justifyContent: 'center'}}>
                   <RotateCcw size={14} style={{marginRight: '0.4rem'}}/> Initiate Restore Process

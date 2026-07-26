@@ -281,7 +281,7 @@ export default function SettingsAI({ config, handleChange, handleSave, handleAct
             <div style={{display: 'flex', justifyContent: 'space-between', marginTop: '1rem', padding: '0.75rem', background: 'rgba(0,0,0,0.3)', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.05)'}}>
                <div>
                  <div style={{fontSize: '0.65rem', color: 'var(--text-secondary)'}}>Last Retrain</div>
-                 <div style={{fontSize: '0.75rem', color: 'var(--text-primary)'}}>May 10, 2024 02:30 AM</div>
+                 <div style={{fontSize: '0.75rem', color: 'var(--text-primary)'}}>Jul 21, 2026 02:30 AM</div>
                </div>
                <div style={{textAlign: 'right'}}>
                  <div style={{fontSize: '0.65rem', color: 'var(--text-secondary)'}}>Performance Change</div>
@@ -334,7 +334,7 @@ export default function SettingsAI({ config, handleChange, handleSave, handleAct
             
             <div className="summary-list" style={{marginBottom: '1.5rem'}}>
                <div className="si-item"><span>Model Version</span><span style={{color:'var(--text-primary)'}}>v2.3.1 <span style={{background:'rgba(0,255,136,0.1)', color:'var(--accent-green)', padding:'0.1rem 0.3rem', borderRadius:'4px', marginLeft:'0.3rem', fontSize:'0.6rem'}}>Latest</span></span></div>
-               <div className="si-item"><span>Trained On</span><span>May 10, 2024 01:30 AM</span></div>
+               <div className="si-item"><span>Trained On</span><span>Jul 18, 2026 01:30 AM</span></div>
                <div className="si-item"><span>Training Data Size</span><span>2.4 TB (2.4M)</span></div>
                <div className="si-item"><span>Validation Accuracy</span><span style={{color:'var(--accent-green)'}}>92.34%</span></div>
                <div className="si-item"><span>Model Size</span><span>152.6 MB</span></div>

@@ -3,9 +3,9 @@ import { Key, Plus, Edit2, Trash2, Link, ExternalLink, Settings, BarChart2, Chec
 
 export default function SettingsAPI({ config, handleChange, handleSave, handleAction }) {
   const defaultApiKeys = [
-    {name: 'Production Key', key: '**** **** 4212', created: 'May 10, 2024', used: 'May 15, 2024', status: 'Active'},
-    {name: 'Integration Key', key: '**** **** 8945', created: 'May 01, 2024', used: 'May 14, 2024', status: 'Active'},
-    {name: 'Read Only Key', key: '**** **** 3318', created: 'Apr 20, 2024', used: 'May 10, 2024', status: 'Inactive'}
+    {name: 'Production Key', key: '**** **** 4212', created: 'Jul 24, 2026', used: 'Jul 16, 2026', status: 'Active'},
+    {name: 'Integration Key', key: '**** **** 8945', created: 'Jul 19, 2026', used: 'Jul 22, 2026', status: 'Active'},
+    {name: 'Read Only Key', key: '**** **** 3318', created: 'Jul 23, 2026', used: 'Jul 12, 2026', status: 'Inactive'}
   ];
   const apiKeysList = config?.api?.apiKeys || defaultApiKeys;
 
@@ -43,9 +43,9 @@ export default function SettingsAPI({ config, handleChange, handleSave, handleAc
   };
 
   const defaultIps = [
-    {ip: '192.168.1.0/24', desc: 'Corporate Network', added: 'May 01, 2024'},
-    {ip: '203.0.113.10', desc: 'Integration Server', added: 'May 05, 2024'},
-    {ip: '198.51.100.0/24', desc: 'Office Network', added: 'May 07, 2024'}
+    {ip: '192.168.1.0/24', desc: 'Corporate Network', added: 'Jul 14, 2026'},
+    {ip: '203.0.113.10', desc: 'Integration Server', added: 'Jul 22, 2026'},
+    {ip: '198.51.100.0/24', desc: 'Office Network', added: 'Jul 21, 2026'}
   ];
   const ipsList = config?.api?.ipWhitelist || defaultIps;
 
@@ -214,10 +214,10 @@ export default function SettingsAPI({ config, handleChange, handleSave, handleAc
             <table className="settings-table" style={{fontSize: '0.65rem'}}>
                <tbody>
                  {[
-                   {time: 'May 15, 2024 10:24:01 AM', event: 'Security Alerts', status: 'Delivered', lat: '240ms'},
-                   {time: 'May 15, 2024 10:23:45 AM', event: 'Security Alerts', status: 'Delivered', lat: '180ms'},
-                   {time: 'May 15, 2024 10:22:15 AM', event: 'Entity Updates', status: 'Delivered', lat: '210ms'},
-                   {time: 'May 15, 2024 10:21:05 AM', event: 'System Health', status: 'Failed', lat: '3.2s', sCol: 'var(--accent-red)'},
+                   {time: 'Jul 26, 2026 10:24:01 AM', event: 'Security Alerts', status: 'Delivered', lat: '240ms'},
+                   {time: 'Jul 16, 2026 10:23:45 AM', event: 'Security Alerts', status: 'Delivered', lat: '180ms'},
+                   {time: 'Jul 24, 2026 10:22:15 AM', event: 'Entity Updates', status: 'Delivered', lat: '210ms'},
+                   {time: 'Jul 16, 2026 10:21:05 AM', event: 'System Health', status: 'Failed', lat: '3.2s', sCol: 'var(--accent-red)'},
                  ].map((row, i) => (
                    <tr key={i}>
                      <td style={{color: 'var(--text-secondary)'}}>{row.time}</td>

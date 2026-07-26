@@ -89,7 +89,7 @@ export default function SettingsAdvanced({ config, handleChange, handleSave, han
                </div>
                <div className="fg-item-horizontal" style={{padding: '0.5rem 0'}}>
                  <label>Last Trained On</label>
-                 <span style={{color: 'var(--text-secondary)', fontSize: '0.75rem'}}>May 14, 2024 02:15 AM</span>
+                 <span style={{color: 'var(--text-secondary)', fontSize: '0.75rem'}}>Jul 16, 2026 02:15 AM</span>
                </div>
                <div className="fg-item-horizontal" style={{padding: '0.5rem 0'}}>
                  <label>Trained By</label>
@@ -157,7 +157,7 @@ export default function SettingsAdvanced({ config, handleChange, handleSave, han
                </div>
                <div className="fg-item-horizontal" style={{padding: '0.4rem 0'}}>
                  <label>Date Format</label>
-                 <select value={config?.advanced?.dateFormat || ""} onChange={(e) => handleChange("advanced", "dateFormat", e.target.value)} name="advanced.dateFormat" className="select-input"><option>May 15, 2024 (MMM DD, YYYY)</option></select>
+                 <select value={config?.advanced?.dateFormat || ""} onChange={(e) => handleChange("advanced", "dateFormat", e.target.value)} name="advanced.dateFormat" className="select-input"><option>Jul 18, 2026 (MMM DD, YYYY)</option></select>
                </div>
                <div className="fg-item-horizontal" style={{padding: '0.4rem 0'}}>
                  <label>Time Format</label>

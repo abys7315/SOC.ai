@@ -3,11 +3,11 @@ import { Search, Plus, Edit2, Trash2, Key, Filter, Check, Minus, Info, Save, Shi
 
 export default function SettingsUsers({ config, handleChange, handleSave, handleAction }) {
   const defaultUsers = [
-    {name: 'SOC Analyst', email: 'soc.analyst@honeywell.com', role: 'SOC Analyst', rcol: '#818cf8', status: 'Active', time: 'May 15, 2024', initials: 'SA'},
-    {name: 'SOC Manager', email: 'soc.manager@honeywell.com', role: 'SOC Manager', rcol: '#34d399', status: 'Active', time: 'May 15, 2024', initials: 'SM'},
-    {name: 'Security Engineer', email: 'sec.eng@honeywell.com', role: 'Security Engineer', rcol: '#f472b6', status: 'Active', time: 'May 14, 2024', initials: 'SE'},
-    {name: 'Auditor', email: 'auditor@honeywell.com', role: 'Auditor', rcol: '#facc15', status: 'Active', time: 'May 12, 2024', initials: 'AU'},
-    {name: 'Viewer', email: 'viewer@honeywell.com', role: 'Viewer', rcol: '#94a3b8', status: 'Offline', time: 'May 10, 2024', initials: 'VW'}
+    {name: 'SOC Analyst', email: 'soc.analyst@honeywell.com', role: 'SOC Analyst', rcol: '#818cf8', status: 'Active', time: 'Jul 15, 2026', initials: 'SA'},
+    {name: 'SOC Manager', email: 'soc.manager@honeywell.com', role: 'SOC Manager', rcol: '#34d399', status: 'Active', time: 'Jul 14, 2026', initials: 'SM'},
+    {name: 'Security Engineer', email: 'sec.eng@honeywell.com', role: 'Security Engineer', rcol: '#f472b6', status: 'Active', time: 'Jul 17, 2026', initials: 'SE'},
+    {name: 'Auditor', email: 'auditor@honeywell.com', role: 'Auditor', rcol: '#facc15', status: 'Active', time: 'Jul 25, 2026', initials: 'AU'},
+    {name: 'Viewer', email: 'viewer@honeywell.com', role: 'Viewer', rcol: '#94a3b8', status: 'Offline', time: 'Jul 13, 2026', initials: 'VW'}
   ];
   const userList = config?.users?.userList || defaultUsers;
 

@@ -226,11 +226,11 @@ export default function SettingsStorage({ config, handleChange, handleSave, hand
                </div>
                <div className="fg-item-horizontal" style={{padding: '0.4rem 0'}}>
                  <label>Last Backup</label>
-                 <span style={{color: 'var(--text-primary)', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.3rem'}}><CheckCircle size={10} color="var(--accent-green)"/> May 15, 2024 02:00 AM</span>
+                 <span style={{color: 'var(--text-primary)', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.3rem'}}><CheckCircle size={10} color="var(--accent-green)"/> Jul 18, 2026 02:00 AM</span>
                </div>
                <div className="fg-item-horizontal" style={{padding: '0.4rem 0'}}>
                  <label>Next Backup</label>
-                 <span style={{color: 'var(--text-secondary)', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.3rem'}}><Clock size={10}/> May 16, 2024 02:00 AM</span>
+                 <span style={{color: 'var(--text-secondary)', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.3rem'}}><Clock size={10}/> Jul 24, 2026 02:00 AM</span>
                </div>
                <div className="fg-item-horizontal" style={{padding: '0.4rem 0'}}>
                  <label>Backup Frequency</label>

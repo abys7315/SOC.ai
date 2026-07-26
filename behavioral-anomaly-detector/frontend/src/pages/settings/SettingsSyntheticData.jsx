@@ -64,7 +64,7 @@ export default function SettingsSyntheticData({ config, handleChange, handleSave
             <div className="form-group-list">
                <div className="fg-item-horizontal">
                  <label>Random Seed</label>
-                 <input value={config?.synthetic_data?.randomSeed || ""} onChange={(e) => handleChange("synthetic_data", "randomSeed", e.target.value)} name="synthetic_data.randomSeed"  type="text" defaultValue="20240515" className="num-input" />
+                 <input value={config?.synthetic_data?.randomSeed || ""} onChange={(e) => handleChange("synthetic_data", "randomSeed", e.target.value)} name="synthetic_data.randomSeed"  type="text" defaultValue="20260726" className="num-input" />
                </div>
                <div className="fg-item-horizontal">
                  <label>Noise Level</label>

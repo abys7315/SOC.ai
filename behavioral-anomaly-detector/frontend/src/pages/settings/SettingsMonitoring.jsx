@@ -221,11 +221,11 @@ export default function SettingsMonitoring({ config, handleChange, handleSave, h
             
             <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
                {[
-                 {title: 'High Memory Usage', desc: 'Memory usage is above 80% on server SOC-NODE-02', time: '10:45 AM', date: 'May 15, 2024', icon: <AlertCircle size={14} color="var(--accent-red)"/>, bg: 'rgba(255,0,60,0.05)'},
-                 {title: 'Disk Space Low', desc: 'Disk usage is above 90% on server SOC-NODE-01', time: '09:12 AM', date: 'May 15, 2024', icon: <AlertTriangle size={14} color="#f59e0b"/>, bg: 'rgba(245, 158, 11, 0.05)'},
-                 {title: 'Service Restarted', desc: 'Analytics Engine service was restarted', time: '02:45 AM', date: 'May 15, 2024', icon: <Info size={14} color="#3b82f6"/>, bg: 'rgba(59, 130, 246, 0.05)'},
-                 {title: 'High CPU Usage', desc: 'CPU usage is above 90% on server SOC-NODE-03', time: '07:30 AM', date: 'May 15, 2024', icon: <AlertTriangle size={14} color="#f59e0b"/>, bg: 'rgba(245, 158, 11, 0.05)'},
-                 {title: 'Network Latency High', desc: 'High latency detected in data ingestion pipeline', time: '08:21 AM', date: 'May 14, 2024', icon: <AlertTriangle size={14} color="#f59e0b"/>, bg: 'rgba(245, 158, 11, 0.05)'},
+                 {title: 'High Memory Usage', desc: 'Memory usage is above 80% on server SOC-NODE-02', time: '10:45 AM', date: 'Jul 19, 2026', icon: <AlertCircle size={14} color="var(--accent-red)"/>, bg: 'rgba(255,0,60,0.05)'},
+                 {title: 'Disk Space Low', desc: 'Disk usage is above 90% on server SOC-NODE-01', time: '09:12 AM', date: 'Jul 22, 2026', icon: <AlertTriangle size={14} color="#f59e0b"/>, bg: 'rgba(245, 158, 11, 0.05)'},
+                 {title: 'Service Restarted', desc: 'Analytics Engine service was restarted', time: '02:45 AM', date: 'Jul 11, 2026', icon: <Info size={14} color="#3b82f6"/>, bg: 'rgba(59, 130, 246, 0.05)'},
+                 {title: 'High CPU Usage', desc: 'CPU usage is above 90% on server SOC-NODE-03', time: '07:30 AM', date: 'Jul 15, 2026', icon: <AlertTriangle size={14} color="#f59e0b"/>, bg: 'rgba(245, 158, 11, 0.05)'},
+                 {title: 'Network Latency High', desc: 'High latency detected in data ingestion pipeline', time: '08:21 AM', date: 'Jul 15, 2026', icon: <AlertTriangle size={14} color="#f59e0b"/>, bg: 'rgba(245, 158, 11, 0.05)'},
                ].map((alert, i) => (
                  <div key={i} style={{display: 'flex', gap: '0.75rem', padding: '0.75rem', background: alert.bg, borderRadius: '6px', border: '1px solid rgba(255,255,255,0.02)'}}>
                     <div style={{marginTop: '0.1rem'}}>{alert.icon}</div>

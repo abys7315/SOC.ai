@@ -234,7 +234,7 @@ export default function SettingsLogs({ config, handleChange, handleSave, handleA
             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.75rem', background: 'rgba(0,0,0,0.2)', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.05)'}}>
                <div>
                  <div style={{fontSize: '0.65rem', color: 'var(--text-secondary)'}}>Last Report Generated</div>
-                 <div style={{fontSize: '0.7rem', color: 'var(--text-primary)'}}>May 14, 2024 11:30 PM</div>
+                 <div style={{fontSize: '0.7rem', color: 'var(--text-primary)'}}>Jul 24, 2026 11:30 PM</div>
                  <div style={{fontSize: '0.65rem', color: 'var(--text-secondary)'}}>by SOC Analyst</div>
                </div>
                <button className="btn-outline" style={{padding: '0.3rem 0.6rem', fontSize: '0.7rem'}} onClick={handleDownload}><Download size={12} style={{marginRight: '0.3rem'}}/> Download</button>

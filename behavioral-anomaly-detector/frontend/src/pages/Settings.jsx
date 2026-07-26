@@ -278,9 +278,9 @@ export default function Settings() {
            <h3 className="panel-title">System Information</h3>
            <div className="sys-info-list">
               <div className="si-item"><span>Platform Version</span><span>v2.3.1</span></div>
-              <div className="si-item"><span>Build Number</span><span>3.3.1.20240510</span></div>
+              <div className="si-item"><span>Build Number</span><span>3.3.1.20260726</span></div>
               <div className="si-item"><span>Environment</span><span>Production</span></div>
-              <div className="si-item"><span>Server Time</span><span>May 15, 2024 10:24:35 AM</span></div>
+              <div className="si-item"><span>Server Time</span><span>Jul 21, 2026 10:24:35 AM</span></div>
               <div className="si-item"><span>Uptime</span><span>18d 5h 24m</span></div>
               <div className="si-item"><span>Connected Nodes</span><span style={{color: 'var(--accent-green)'}}>24 / 24</span></div>
               <div className="si-item"><span>Log Ingestion Rate</span><span>45.2K events/sec</span></div>
@@ -309,7 +309,7 @@ export default function Settings() {
            <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: 'var(--accent-green)'}}>
              <div className="live-dot"></div> Live System
            </div>
-           <span style={{color: 'var(--text-secondary)', fontSize: '0.8rem'}}>May 15, 2024 - 10:24:35 AM</span>
+           <span style={{color: 'var(--text-secondary)', fontSize: '0.8rem'}}>Jul 26, 2026 - 10:24:35 AM</span>
          </div>
       </div>
 
