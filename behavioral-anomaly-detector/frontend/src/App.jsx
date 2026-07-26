@@ -15,8 +15,7 @@ import Settings from './pages/Settings';
 import Login from './pages/Login';
 import { useAppContext } from './AppContext';
 import './App.css'; // Add layout CSS
-
-
+import { API_BASE, WS_BASE } from './config';
 function App() {
   const { userSession, loading } = useAppContext();
   const [alerts, setAlerts] = useState([]);
