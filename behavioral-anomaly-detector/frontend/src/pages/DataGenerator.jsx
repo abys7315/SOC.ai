@@ -108,7 +108,7 @@ export default function DataGenerator() {
         scenario: selectedScenario,
         config: scenarioConfig
     };
-    fetch(`http://localhost:8000${endpoint}`, { 
+    fetch(`${API_BASE}${endpoint}`, { 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: endpoint.includes('start') ? JSON.stringify(payload) : null

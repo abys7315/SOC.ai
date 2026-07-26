@@ -5,6 +5,7 @@ import './BehaviorAnalytics.css';
 import UserActivityReportTemplate from './UserActivityReportTemplate';
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
+import { API_BASE } from '../config';
 
 export default function BehaviorAnalytics() {
   const [entityType, setEntityType] = useState('All');
@@ -16,7 +17,7 @@ export default function BehaviorAnalytics() {
   const [isMapExpanded, setIsMapExpanded] = useState(false);
   
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/analytics/geo')
+    fetch(`${API_BASE}/api/analytics/geo`)
       .then(res => res.json())
       .then(data => setGeoData(data))
       .catch(err => console.error("Error fetching geo data:", err));
